@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dimora Vertigo &middot; Appartamenti Fiorenti</title>
+<link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="../immagini/img_01.webp" alt="Appartamenti Fiorenti"></a>
+  <div class="nav-links">
+    <a href="index.html" data-page="index">Home</a>
+    <a href="vv14.html" data-page="vv14">Casa di Ringhiera</a>
+    <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
+    <a href="da23.html" data-page="da23" class="active">Dimora Vertigo</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-dimore">
+      <button class="nav-dimore-btn" onclick="toggleDimore(this)" aria-expanded="false">
+        Residences <span class="nav-dimore-arrow"><span></span><span></span><span></span></span>
+      </button>
+      <div class="nav-dimore-menu">
+        <a href="vv14.html" data-page="vv14">Casa di Ringhiera</a>
+        <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
+        <a href="da23.html" data-page="da23" class="active">Dimora Vertigo</a>
+      </div>
+    </div>
+    <div class="nav-lang">
+      <a href="../da23.html" class="nav-lang-opt">IT</a>
+      <span class="nav-lang-sep">|</span>
+      <span class="nav-lang-opt active">EN</span>
+    </div>
+    <button class="nav-book" onclick="openModal('da23')">Book</button>
+  </div>
+</nav>
+
+<section class="prop-hero">
+  <img src="../immagini/img_04.jpg" alt="Dimora Vertigo" class="prop-hero-img">
+  <div class="prop-hero-overlay"></div>
+  <div class="prop-hero-title">
+    <p class="prop-hero-eyebrow">DA23 &middot; Milan</p>
+    <h1 class="prop-hero-name">Dimora Vertigo</h1>
+  </div>
+</section>
+<div class="gallery-strip">
+  <img src="../immagini/img_04.jpg" alt="" onclick="openLb(0)" class="active">
+  <img src="../immagini/img_12.jpg" alt="" onclick="openLb(1)"><img src="../immagini/img_13.jpg" alt="" onclick="openLb(2)"><img src="../immagini/img_14.jpg" alt="" onclick="openLb(3)"><img src="../immagini/img_15.jpg" alt="" onclick="openLb(4)"><img src="../immagini/img_16.jpg" alt="" onclick="openLb(5)">
+</div>
+<div class="prop-content">
+  <div class="prop-main">
+    <p class="section-eyebrow">DA23</p>
+    <h2>A residence designed<br>for those who truly live Milan.</h2>
+    <p>The name is no accident: Dimora Vertigo plays with perspectives. The ceiling heights, the corridors, the light entering from unexpected angles &mdash; every room has something to discover.</p>
+    <p>A central location, just minutes on foot from the Duomo and the commercial and cultural heart of Milan. The apartment sleeps up to six guests across one bedroom and quality finishes throughout.</p>
+    <div class="amenities">
+      <h3>Amenities</h3>
+      <div class="amenities-grid">
+        <div class="amenity">Fibre-optic Wi-Fi</div>
+        <div class="amenity">Fully equipped kitchen</div>
+        <div class="amenity">1 double bed</div>
+        <div class="amenity">2 sofa beds</div>
+        <div class="amenity">Washing machine</div>
+        <div class="amenity">Air conditioning</div>
+        <div class="amenity">Smart TV</div>
+        <div class="amenity">Premium linen</div>
+        <div class="amenity">Self check-in (24h)</div>
+        <div class="amenity">Central location</div>
+      </div>
+    </div>
+    <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
+      <button class="btn-primary" onclick="openModal('da23')">Book now</button>
+      <a href="index.html" class="btn-outline">Other residences</a>
+    </div>
+  </div>
+  <aside class="prop-sidebar">
+    <div class="booking-card">
+      <p class="bc-title">Dimora Vertigo</p>
+      <p class="bc-sub">Direct booking &middot; No commissions</p>
+      <div class="bc-meta">
+        <div><p class="bc-m-label">Guests</p><p class="bc-m-val">6</p></div>
+        <div><p class="bc-m-label">Rooms</p><p class="bc-m-val">1 + 2 living</p></div>
+        <div><p class="bc-m-label">Check-in</p><p class="bc-m-val">14:00</p></div>
+      </div>
+      <button class="btn-primary bc-btn" onclick="openModal('da23')">Check availability</button>
+      <p class="bc-note">Secure payment &middot; Flexible cancellation<br>24/7 support</p>
+    </div>
+  </aside>
+</div>
+<!-- Lightbox -->
+<div class="lightbox" id="lb" onclick="if(event.target===this)closeLb()">
+  <button class="lb-close" onclick="closeLb()">&#10005;</button>
+  <button class="lb-prev" onclick="lbPrev()">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-next" onclick="lbNext()">&#8250;</button>
+</div>
+<footer class="site-footer"><div class="footer-logo"><img src="../immagini/img_01.webp" alt=""></div><p class="footer-note">Milan &middot; Appartamenti Fiorenti &middot; All rights reserved</p><div class="footer-links"><a href="index.html">Home</a><a href="vv14.html">Casa di Ringhiera</a><a href="c3a.html">Dimora sul Canale</a><a href="da23.html">Dimora Vertigo</a></div></footer>
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)"><div class="modal" role="dialog" aria-modal="true"><button class="modal-close" onclick="closeModalDirect()">&#10005;</button><p class="modal-eyebrow" id="modalCode"></p><h3 class="modal-title" id="modalTitle"></h3><div class="modal-widget" id="modalWidget"></div></div></div>
+<script>
+const VIKEY_KEYS={vv14:'rQcVj7dswRB0atMM8aXaqZnKJjsRdDVrx384GCmFqt4',c3a:'rQcVj7dswRB0atMM8aXaqZnKJ2cfUVNDx384GCmFqt4',da23:'rQcVj7dswRB0atMM8aXaqZy_JxxjTzRJx384GCmFqt4'};
+const PROP_NAMES={vv14:['VV14 · Apartment','Casa di Ringhiera'],c3a:['C3A · Apartment','Dimora sul Canale'],da23:['DA23 · Apartment','Dimora Vertigo']};
+function loadVikeyWidget(){var old=document.getElementById('vikeyScript');if(old)old.remove();var s=document.createElement('script');s.id='vikeyScript';s.src='https://storage.googleapis.com/vikey-widgets/bookingengine/vikey-booking-engine-widget.js';s.async=true;document.body.appendChild(s);}
+function openModal(id){const[code,name]=PROP_NAMES[id];document.getElementById('modalCode').textContent=code;document.getElementById('modalTitle').textContent=name;document.getElementById('modalWidget').innerHTML='<div class="vikey-booking-engine-widget" data-client-key="'+VIKEY_KEYS[id]+'" data-vikey-language="en" data-vikey-widget-width="100%"></div>';loadVikeyWidget();document.getElementById('modalOverlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeModalDirect(){document.getElementById('modalOverlay').classList.remove('open');document.getElementById('modalWidget').innerHTML='';document.body.style.overflow='';}
+function closeModal(e){if(e.target===document.getElementById('modalOverlay'))closeModalDirect();}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModalDirect();});
+const gallImgs=["../immagini/img_04.jpg","../immagini/img_12.jpg","../immagini/img_13.jpg","../immagini/img_14.jpg","../immagini/img_15.jpg","../immagini/img_16.jpg"];
+let lbIdx=0;
+function openLb(i){lbIdx=i;document.getElementById('lb').classList.add('open');document.getElementById('lbImg').src=gallImgs[i];document.body.style.overflow='hidden';updateStrip();}
+function closeLb(){document.getElementById('lb').classList.remove('open');document.body.style.overflow='';}
+function lbNext(){lbIdx=(lbIdx+1)%gallImgs.length;document.getElementById('lbImg').src=gallImgs[lbIdx];updateStrip();}
+function lbPrev(){lbIdx=(lbIdx-1+gallImgs.length)%gallImgs.length;document.getElementById('lbImg').src=gallImgs[lbIdx];updateStrip();}
+function updateStrip(){document.querySelectorAll('.gallery-strip img').forEach((el,i)=>el.classList.toggle('active',i===lbIdx));}
+document.addEventListener('keydown',e=>{if(!document.getElementById('lb').classList.contains('open'))return;if(e.key==='ArrowRight')lbNext();if(e.key==='ArrowLeft')lbPrev();if(e.key==='Escape')closeLb();});
+function toggleDimore(btn){var menu=btn.nextElementSibling;var isOpen=menu.classList.toggle('open');btn.setAttribute('aria-expanded',isOpen);if(isOpen){document.addEventListener('click',function closeDimore(e){if(!btn.parentElement.contains(e.target)){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');document.removeEventListener('click',closeDimore);}});}}
+</script>
+<script src="../main.js"></script>
+</body>
+</html>

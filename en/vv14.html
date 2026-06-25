@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Casa di Ringhiera &middot; Appartamenti Fiorenti</title>
+<link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="../immagini/img_01.webp" alt="Appartamenti Fiorenti"></a>
+  <div class="nav-links">
+    <a href="index.html" data-page="index">Home</a>
+    <a href="vv14.html" data-page="vv14" class="active">Casa di Ringhiera</a>
+    <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
+    <a href="da23.html" data-page="da23">Dimora Vertigo</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-dimore">
+      <button class="nav-dimore-btn" onclick="toggleDimore(this)" aria-expanded="false">
+        Residences <span class="nav-dimore-arrow"><span></span><span></span><span></span></span>
+      </button>
+      <div class="nav-dimore-menu">
+        <a href="vv14.html" data-page="vv14" class="active">Casa di Ringhiera</a>
+        <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
+        <a href="da23.html" data-page="da23">Dimora Vertigo</a>
+      </div>
+    </div>
+    <div class="nav-lang">
+      <a href="../vv14.html" class="nav-lang-opt">IT</a>
+      <span class="nav-lang-sep">|</span>
+      <span class="nav-lang-opt active">EN</span>
+    </div>
+    <button class="nav-book" onclick="openModal('vv14')">Book</button>
+  </div>
+</nav>
+
+<section class="prop-hero">
+  <img src="../immagini/img_02.jpg" alt="Casa di Ringhiera" class="prop-hero-img">
+  <div class="prop-hero-overlay"></div>
+  <div class="prop-hero-title">
+    <p class="prop-hero-eyebrow">VV14 &middot; Milan</p>
+    <h1 class="prop-hero-name">Casa di Ringhiera</h1>
+  </div>
+</section>
+<div class="gallery-strip">
+  <img src="../immagini/img_02.jpg" alt="" onclick="openLb(0)" class="active">
+  <img src="../immagini/img_17.jpg" alt="" onclick="openLb(1)"><img src="../immagini/img_18.jpg" alt="" onclick="openLb(2)"><img src="../immagini/img_19.jpg" alt="" onclick="openLb(3)"><img src="../immagini/img_20.jpg" alt="" onclick="openLb(4)"><img src="../immagini/img_21.jpg" alt="" onclick="openLb(5)"><img src="../immagini/img_22.jpg" alt="" onclick="openLb(6)"><img src="../immagini/img_23.jpg" alt="" onclick="openLb(7)"><img src="../immagini/img_24.jpg" alt="" onclick="openLb(8)">
+</div>
+<div class="prop-content">
+  <div class="prop-main">
+    <p class="section-eyebrow">VV14</p>
+    <h2>A residence designed<br>for those who truly live Milan.</h2>
+    <p>The ringhiera building is the soul of Milan that tourists never see: silent courtyards, wrought-iron balconies, ceilings at heights modern construction no longer dares to replicate.</p>
+    <p>Casa di Ringhiera brings all of this into a modern, comfortable apartment — restored original floors, two bedrooms, a fully equipped kitchen and an unexpected quiet for being right in the city.</p>
+    <div class="amenities">
+      <h3>Amenities</h3>
+      <div class="amenities-grid">
+        <div class="amenity">Fibre-optic Wi-Fi</div>
+        <div class="amenity">Fully equipped kitchen</div>
+        <div class="amenity">1 double bed</div>
+        <div class="amenity">2 single beds (convertible)</div>
+        <div class="amenity">1 sofa bed</div>
+        <div class="amenity">Washing machine</div>
+        <div class="amenity">Air conditioning</div>
+        <div class="amenity">Smart TV</div>
+        <div class="amenity">Premium linen</div>
+        <div class="amenity">Self check-in (24h)</div>
+        <div class="amenity">Nearby parking</div>
+      </div>
+    </div>
+    <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
+      <button class="btn-primary" onclick="openModal('vv14')">Book now</button>
+      <a href="index.html" class="btn-outline">Other residences</a>
+    </div>
+  </div>
+  <aside class="prop-sidebar">
+    <div class="booking-card">
+      <p class="bc-title">Casa di Ringhiera</p>
+      <p class="bc-sub">Direct booking &middot; No commissions</p>
+      <div class="bc-meta">
+        <div><p class="bc-m-label">Guests</p><p class="bc-m-val">6</p></div>
+        <div><p class="bc-m-label">Rooms</p><p class="bc-m-val">2</p></div>
+        <div><p class="bc-m-label">Check-in</p><p class="bc-m-val">15:00</p></div>
+      </div>
+      <button class="btn-primary bc-btn" onclick="openModal('vv14')">Check availability</button>
+      <p class="bc-note">Secure payment &middot; Flexible cancellation<br>24/7 support</p>
+    </div>
+  </aside>
+</div>
+<!-- Lightbox -->
+<div class="lightbox" id="lb" onclick="if(event.target===this)closeLb()">
+  <button class="lb-close" onclick="closeLb()">&#10005;</button>
+  <button class="lb-prev" onclick="lbPrev()">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-next" onclick="lbNext()">&#8250;</button>
+</div>
+<footer class="site-footer"><div class="footer-logo"><img src="../immagini/img_01.webp" alt=""></div><p class="footer-note">Milan &middot; Appartamenti Fiorenti &middot; All rights reserved</p><div class="footer-links"><a href="index.html">Home</a><a href="vv14.html">Casa di Ringhiera</a><a href="c3a.html">Dimora sul Canale</a><a href="da23.html">Dimora Vertigo</a></div></footer>
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)"><div class="modal" role="dialog" aria-modal="true"><button class="modal-close" onclick="closeModalDirect()">&#10005;</button><p class="modal-eyebrow" id="modalCode"></p><h3 class="modal-title" id="modalTitle"></h3><div class="modal-widget" id="modalWidget"></div></div></div>
+<script>
+const VIKEY_KEYS={vv14:'rQcVj7dswRB0atMM8aXaqZnKJjsRdDVrx384GCmFqt4',c3a:'rQcVj7dswRB0atMM8aXaqZnKJ2cfUVNDx384GCmFqt4',da23:'rQcVj7dswRB0atMM8aXaqZy_JxxjTzRJx384GCmFqt4'};
+const PROP_NAMES={vv14:['VV14 · Apartment','Casa di Ringhiera'],c3a:['C3A · Apartment','Dimora sul Canale'],da23:['DA23 · Apartment','Dimora Vertigo']};
+function loadVikeyWidget(){var old=document.getElementById('vikeyScript');if(old)old.remove();var s=document.createElement('script');s.id='vikeyScript';s.src='https://storage.googleapis.com/vikey-widgets/bookingengine/vikey-booking-engine-widget.js';s.async=true;document.body.appendChild(s);}
+function openModal(id){const[code,name]=PROP_NAMES[id];document.getElementById('modalCode').textContent=code;document.getElementById('modalTitle').textContent=name;document.getElementById('modalWidget').innerHTML='<div class="vikey-booking-engine-widget" data-client-key="'+VIKEY_KEYS[id]+'" data-vikey-language="en" data-vikey-widget-width="100%"></div>';loadVikeyWidget();document.getElementById('modalOverlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeModalDirect(){document.getElementById('modalOverlay').classList.remove('open');document.getElementById('modalWidget').innerHTML='';document.body.style.overflow='';}
+function closeModal(e){if(e.target===document.getElementById('modalOverlay'))closeModalDirect();}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModalDirect();});
+const gallImgs=["../immagini/img_02.jpg","../immagini/img_17.jpg","../immagini/img_18.jpg","../immagini/img_19.jpg","../immagini/img_20.jpg","../immagini/img_21.jpg","../immagini/img_22.jpg","../immagini/img_23.jpg","../immagini/img_24.jpg"];
+let lbIdx=0;
+function openLb(i){lbIdx=i;document.getElementById('lb').classList.add('open');document.getElementById('lbImg').src=gallImgs[i];document.body.style.overflow='hidden';updateStrip();}
+function closeLb(){document.getElementById('lb').classList.remove('open');document.body.style.overflow='';}
+function lbNext(){lbIdx=(lbIdx+1)%gallImgs.length;document.getElementById('lbImg').src=gallImgs[lbIdx];updateStrip();}
+function lbPrev(){lbIdx=(lbIdx-1+gallImgs.length)%gallImgs.length;document.getElementById('lbImg').src=gallImgs[lbIdx];updateStrip();}
+function updateStrip(){document.querySelectorAll('.gallery-strip img').forEach((el,i)=>el.classList.toggle('active',i===lbIdx));}
+document.addEventListener('keydown',e=>{if(!document.getElementById('lb').classList.contains('open'))return;if(e.key==='ArrowRight')lbNext();if(e.key==='ArrowLeft')lbPrev();if(e.key==='Escape')closeLb();});
+function toggleDimore(btn){var menu=btn.nextElementSibling;var isOpen=menu.classList.toggle('open');btn.setAttribute('aria-expanded',isOpen);if(isOpen){document.addEventListener('click',function closeDimore(e){if(!btn.parentElement.contains(e.target)){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');document.removeEventListener('click',closeDimore);}});}}
+</script>
+<script src="../main.js"></script>
+</body>
+</html>

@@ -560,6 +560,56 @@ body{background:var(--cream);color:var(--ink);font-family:var(--body);line-heigh
 }
 @media(prefers-reduced-motion:reduce){.prop-hero-img,.gallery-strip img{transition:none}}
 
+/* ══════════════════════════════════════════
+   main.js — stili di supporto
+══════════════════════════════════════════ */
+
+/* Language switcher */
+.nav-lang{display:flex;align-items:center;gap:.3rem;font-family:var(--sans);font-size:.6rem;letter-spacing:.18em}
+.nav-lang-opt{color:var(--ash);text-decoration:none;transition:color .2s;padding:.1rem 0}
+.nav-lang-opt:hover{color:var(--terra)}
+.nav-lang-opt.active{color:var(--ink);font-weight:500;pointer-events:none}
+.nav-lang-sep{color:var(--sage-lt);font-size:.55rem}
+
+/* Page transition */
+body{opacity:0;transition:opacity .32s ease}
+body.page-ready{opacity:1}
+
+/* Navbar scroll */
+.site-nav{transition:padding .3s ease,box-shadow .3s ease,background .3s ease}
+.nav-scrolled{padding:.65rem 3rem;box-shadow:0 2px 20px rgba(28,43,34,.08)}
+.nav-hidden{transform:translateY(-110%);transition:transform .35s ease,padding .3s ease,box-shadow .3s ease}
+@media(max-width:768px){.nav-scrolled{padding:.55rem 1.25rem}}
+
+/* Hero bg second layer */
+#heroBg2{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.22) saturate(.6)}
+
+/* Prop hero parallax — prevent overflow flash */
+.prop-hero{overflow:hidden}
+.prop-hero-img{transform-origin:center center;will-change:transform}
+
+/* Scroll-reveal */
+.will-reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.revealed{opacity:1;transform:translateY(0)}
+
+/* Gallery strip reveal */
+.strip-hidden{opacity:0;transform:translateY(10px);transition:opacity .4s ease,transform .4s ease,border-color .2s}
+.strip-visible{opacity:.7;transform:translateY(0)}
+.strip-visible:hover,.strip-visible.active{opacity:1}
+
+/* Modal slide-in / slide-out */
+@keyframes modalIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes modalOut{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(16px)}}
+.modal-slide-in{animation:modalIn .35s ease forwards}
+.modal-slide-out{animation:modalOut .28s ease forwards}
+
+/* Booking card button smooth letter-spacing */
+.bc-btn{transition:background .2s,letter-spacing .25s ease}
+
+@media(prefers-reduced-motion:reduce){
+  body,.will-reveal,.strip-hidden,.site-nav,.nav-scrolled,.nav-hidden{transition:none;animation:none;opacity:1;transform:none}
+}
+
 /* ── PROP SELECTOR ── */
 .prop-selector{display:flex;flex-direction:column;gap:.75rem}
 .prop-sel-btn{

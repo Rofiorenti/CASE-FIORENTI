@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Home &middot; Appartamenti Fiorenti</title>
+<link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="../immagini/img_01.webp" alt="Appartamenti Fiorenti"></a>
+  <div class="nav-links">
+    <a href="index.html" data-page="index" class="active">Home</a>
+    <a href="vv14.html" data-page="vv14">Casa di Ringhiera</a>
+    <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
+    <a href="da23.html" data-page="da23">Dimora Vertigo</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-dimore">
+      <button class="nav-dimore-btn" onclick="toggleDimore(this)" aria-expanded="false">
+        Residences <span class="nav-dimore-arrow"><span></span><span></span><span></span></span>
+      </button>
+      <div class="nav-dimore-menu">
+        <a href="vv14.html" data-page="vv14">Casa di Ringhiera</a>
+        <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
+        <a href="da23.html" data-page="da23">Dimora Vertigo</a>
+      </div>
+    </div>
+    <div class="nav-lang">
+      <a href="../index.html" class="nav-lang-opt">IT</a>
+      <span class="nav-lang-sep">|</span>
+      <span class="nav-lang-opt active">EN</span>
+    </div>
+    <button class="nav-book" onclick="openSelector()">Book</button>
+  </div>
+</nav>
+
+<section class="hero-index">
+  <div class="hero-bg-idx" id="heroBg" style="background-image:url('../immagini/img_02.jpg')"></div>
+  <div class="hero-dots-idx" id="heroDots"></div>
+  <div class="hero-content-idx">
+    <img src="../immagini/img_01.webp" alt="Appartamenti Fiorenti" class="hero-logo-lg">
+    <p class="hero-tagline">Three signature residences in the heart of Milan</p>
+    <div class="hero-ctas">
+      <a href="#residenze" class="btn-primary">Discover the residences</a>
+    </div>
+  </div>
+  <div class="hero-scroll-idx"><div class="scroll-ln"></div><span>Explore</span></div>
+</section>
+<div class="divider">&#10022; &#10022; &#10022;</div>
+<section class="intro-sec">
+  <p class="section-eyebrow">Our philosophy</p>
+  <h2>We don&apos;t rent apartments.<br>We offer a way to live Milan.</h2>
+  <p>Every residence is crafted down to the last detail: from materials to furnishings, from linen to natural light. Three distinct characters, one constant care.</p>
+</section>
+<section class="props-sec" id="residenze">
+  <p class="section-eyebrow" style="margin-bottom:3rem">The Residences</p>
+  <div class="props-grid">
+    <a href="vv14.html" class="pc">
+      <div class="pc-vis"><img src="../immagini/img_02.jpg" alt="Casa di Ringhiera"><div class="pc-badge">Available</div><div class="pc-name-ov">Casa di<br>Ringhiera</div></div>
+      <div class="pc-body"><p class="pc-code">VV14 &middot; Milan</p><p class="pc-desc">The authentic Milanese soul. High ceilings, original floors and the silent courtyard that only ringhiera buildings can offer.</p>
+      <div class="pc-meta"><div><p class="pc-ml">Guests</p><p class="pc-mv">6</p></div><div><p class="pc-ml">Rooms</p><p class="pc-mv">2</p></div><div><p class="pc-ml">Check-in</p><p class="pc-mv">15:00</p></div></div></div>
+      <div class="pc-ctas"><span class="btn-outline" style="font-size:.62rem">Discover &rarr;</span><button class="btn-primary" style="font-size:.62rem" onclick="event.preventDefault();openModal('vv14')">Book</button></div>
+    </a>
+    <a href="c3a.html" class="pc">
+      <div class="pc-vis"><img src="../immagini/img_03.jpg" alt="Dimora sul Canale"><div class="pc-badge">Available</div><div class="pc-name-ov">Dimora<br>sul Canale</div></div>
+      <div class="pc-body"><p class="pc-code">C3A &middot; Milan</p><p class="pc-desc">Navigli, aperitivos and neighbourhood life. A bright apartment steps away from the city&apos;s most authentic atmosphere.</p>
+      <div class="pc-meta"><div><p class="pc-ml">Guests</p><p class="pc-mv">8</p></div><div><p class="pc-ml">Rooms</p><p class="pc-mv">4</p></div><div><p class="pc-ml">Check-in</p><p class="pc-mv">15:00</p></div></div></div>
+      <div class="pc-ctas"><span class="btn-outline" style="font-size:.62rem">Discover &rarr;</span><button class="btn-primary" style="font-size:.62rem" onclick="event.preventDefault();openModal('c3a')">Book</button></div>
+    </a>
+    <a href="da23.html" class="pc">
+      <div class="pc-vis"><img src="../immagini/img_04.jpg" alt="Dimora Vertigo"><div class="pc-badge">Available</div><div class="pc-name-ov">Dimora<br>Vertigo</div></div>
+      <div class="pc-body"><p class="pc-code">DA23 &middot; Milan</p><p class="pc-desc">Unexpected perspectives in the heart of Milan. An apartment that plays with heights and depths, close to iconic landmarks.</p>
+      <div class="pc-meta"><div><p class="pc-ml">Guests</p><p class="pc-mv">6</p></div><div><p class="pc-ml">Rooms</p><p class="pc-mv">1</p></div><div><p class="pc-ml">Check-in</p><p class="pc-mv">14:00</p></div></div></div>
+      <div class="pc-ctas"><span class="btn-outline" style="font-size:.62rem">Discover &rarr;</span><button class="btn-primary" style="font-size:.62rem" onclick="event.preventDefault();openModal('da23')">Book</button></div>
+    </a>
+  </div>
+</section>
+<footer class="site-footer"><div class="footer-logo"><img src="../immagini/img_01.webp" alt="Appartamenti Fiorenti"></div><p class="footer-note">Milan &middot; Appartamenti Fiorenti &middot; All rights reserved</p><div class="footer-links"><a href="index.html">Home</a><a href="vv14.html">Casa di Ringhiera</a><a href="c3a.html">Dimora sul Canale</a><a href="da23.html">Dimora Vertigo</a></div></footer>
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" onclick="closeModalDirect()">&#10005;</button>
+
+    <!-- STEP 1: property selection -->
+    <div id="modalStep1">
+      <p class="modal-eyebrow">Book</p>
+      <h3 class="modal-title" style="margin-bottom:1.75rem">Which residence interests you?</h3>
+      <div class="prop-selector">
+        <button class="prop-sel-btn" onclick="selectProp('vv14')">
+          <span class="psel-code">VV14</span>
+          <span class="psel-name">Casa di Ringhiera</span>
+          <span class="psel-detail">2 rooms &middot; 6 guests</span>
+          <span class="psel-arrow">&#8250;</span>
+        </button>
+        <button class="prop-sel-btn" onclick="selectProp('c3a')">
+          <span class="psel-code">C3A</span>
+          <span class="psel-name">Dimora sul Canale</span>
+          <span class="psel-detail">4 rooms &middot; 8 guests</span>
+          <span class="psel-arrow">&#8250;</span>
+        </button>
+        <button class="prop-sel-btn" onclick="selectProp('da23')">
+          <span class="psel-code">DA23</span>
+          <span class="psel-name">Dimora Vertigo</span>
+          <span class="psel-detail">1 room &middot; 6 guests</span>
+          <span class="psel-arrow">&#8250;</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 2: Vikey widget -->
+    <div id="modalStep2" style="display:none">
+      <button class="modal-back" onclick="backToSelector()">&#8592; Change residence</button>
+      <p class="modal-eyebrow" id="modalCode"></p>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <div class="modal-widget" id="modalWidget"></div>
+    </div>
+  </div>
+</div>
+<script>
+const VIKEY_KEYS={vv14:'rQcVj7dswRB0atMM8aXaqZnKJjsRdDVrx384GCmFqt4',c3a:'rQcVj7dswRB0atMM8aXaqZnKJ2cfUVNDx384GCmFqt4',da23:'rQcVj7dswRB0atMM8aXaqZy_JxxjTzRJx384GCmFqt4'};
+const PROP_NAMES={vv14:['VV14 · Apartment','Casa di Ringhiera'],c3a:['C3A · Apartment','Dimora sul Canale'],da23:['DA23 · Apartment','Dimora Vertigo']};
+function loadVikeyWidget(){
+  var old=document.getElementById('vikeyScript');if(old)old.remove();
+  var s=document.createElement('script');s.id='vikeyScript';
+  s.src='https://storage.googleapis.com/vikey-widgets/bookingengine/vikey-booking-engine-widget.js';
+  s.async=true;document.body.appendChild(s);
+}
+function openModal(id){
+  const[code,name]=PROP_NAMES[id];
+  document.getElementById('modalCode').textContent=code;
+  document.getElementById('modalTitle').textContent=name;
+  document.getElementById('modalWidget').innerHTML='<div class="vikey-booking-engine-widget" data-client-key="'+VIKEY_KEYS[id]+'" data-vikey-language="en" data-vikey-widget-width="100%"></div>';
+  loadVikeyWidget();
+  document.getElementById('modalStep1').style.display='none';
+  document.getElementById('modalStep2').style.display='block';
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModalDirect(){document.getElementById('modalOverlay').classList.remove('open');document.getElementById('modalWidget').innerHTML='';document.body.style.overflow='';}
+function closeModal(e){if(e.target===document.getElementById('modalOverlay'))closeModalDirect();}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModalDirect();});
+function openSelector(){
+  document.getElementById('modalStep1').style.display='block';
+  document.getElementById('modalStep2').style.display='none';
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function selectProp(id){
+  document.getElementById('modalStep1').style.display='none';
+  document.getElementById('modalStep2').style.display='block';
+  openModal(id);
+}
+function backToSelector(){
+  document.getElementById('modalStep1').style.display='block';
+  document.getElementById('modalStep2').style.display='none';
+}
+function toggleDimore(btn) {
+  var menu = btn.nextElementSibling;
+  var isOpen = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen);
+  if (isOpen) {
+    document.addEventListener('click', function closeDimore(e) {
+      if (!btn.parentElement.contains(e.target)) {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        document.removeEventListener('click', closeDimore);
+      }
+    });
+  }
+}
+</script>
+<script src="../main.js"></script>
+</body>
+</html>
