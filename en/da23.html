@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Dimora Vertigo &middot; Appartamenti Fiorenti</title>
+<meta name="description" content="Dimora Vertigo (DA23): apartment with unexpected perspectives in central Milan, near the Duomo. Up to 6 guests. Book directly with no commissions.">
+<meta property="og:title" content="Dimora Vertigo &middot; Appartamenti Fiorenti">
+<meta property="og:description" content="Unexpected perspectives in the heart of Milan. An apartment that plays with heights and depths, close to iconic landmarks.">
+<meta property="og:image" content="https://casefiorenti.it/immagini/img_04.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://casefiorenti.it/en/da23.html">
+<link rel="canonical" href="https://casefiorenti.it/en/da23.html">
+<link rel="alternate" hreflang="it" href="https://casefiorenti.it/da23.html">
+<link rel="alternate" hreflang="en" href="https://casefiorenti.it/en/da23.html">
+<link rel="icon" href="../immagini/img_01.webp" type="image/webp">
 <link rel="stylesheet" href="../stile.css">
 </head>
 <body>
@@ -35,7 +46,7 @@
 </nav>
 
 <section class="prop-hero">
-  <img src="../immagini/img_04.jpg" alt="Dimora Vertigo" class="prop-hero-img">
+  <img src="../immagini/img_04.jpg" alt="Dimora Vertigo" class="prop-hero-img" fetchpriority="high">
   <div class="prop-hero-overlay"></div>
   <div class="prop-hero-title">
     <p class="prop-hero-eyebrow">DA23 &middot; Milan</p>
@@ -44,7 +55,7 @@
 </section>
 <div class="gallery-strip">
   <img src="../immagini/img_04.jpg" alt="" onclick="openLb(0)" class="active">
-  <img src="../immagini/img_12.jpg" alt="" onclick="openLb(1)"><img src="../immagini/img_13.jpg" alt="" onclick="openLb(2)"><img src="../immagini/img_14.jpg" alt="" onclick="openLb(3)"><img src="../immagini/img_15.jpg" alt="" onclick="openLb(4)"><img src="../immagini/img_16.jpg" alt="" onclick="openLb(5)">
+  <img src="../immagini/img_12.jpg" alt="" onclick="openLb(1)" loading="lazy"><img src="../immagini/img_13.jpg" alt="" onclick="openLb(2)" loading="lazy"><img src="../immagini/img_14.jpg" alt="" onclick="openLb(3)" loading="lazy"><img src="../immagini/img_15.jpg" alt="" onclick="openLb(4)" loading="lazy"><img src="../immagini/img_16.jpg" alt="" onclick="openLb(5)" loading="lazy">
 </div>
 <div class="prop-content">
   <div class="prop-main">
@@ -87,32 +98,16 @@
   </aside>
 </div>
 <!-- Lightbox -->
-<div class="lightbox" id="lb" onclick="if(event.target===this)closeLb()">
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Image gallery" onclick="if(event.target===this)closeLb()">
   <button class="lb-close" onclick="closeLb()">&#10005;</button>
   <button class="lb-prev" onclick="lbPrev()">&#8249;</button>
   <img id="lbImg" src="" alt="">
   <button class="lb-next" onclick="lbNext()">&#8250;</button>
 </div>
-<footer class="site-footer"><div class="footer-logo"><img src="../immagini/img_01.webp" alt=""></div><p class="footer-note">Milan &middot; Appartamenti Fiorenti &middot; All rights reserved</p><div class="footer-links"><a href="index.html">Home</a><a href="vv14.html">Casa di Ringhiera</a><a href="c3a.html">Dimora sul Canale</a><a href="da23.html">Dimora Vertigo</a></div></footer>
-<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)"><div class="modal" role="dialog" aria-modal="true"><button class="modal-close" onclick="closeModalDirect()">&#10005;</button><p class="modal-eyebrow" id="modalCode"></p><h3 class="modal-title" id="modalTitle"></h3><div class="modal-widget" id="modalWidget"></div></div></div>
-<script>
-const VIKEY_KEYS={vv14:'rQcVj7dswRB0atMM8aXaqZnKJjsRdDVrx384GCmFqt4',c3a:'rQcVj7dswRB0atMM8aXaqZnKJ2cfUVNDx384GCmFqt4',da23:'rQcVj7dswRB0atMM8aXaqZy_JxxjTzRJx384GCmFqt4'};
-const PROP_NAMES={vv14:['VV14 · Apartment','Casa di Ringhiera'],c3a:['C3A · Apartment','Dimora sul Canale'],da23:['DA23 · Apartment','Dimora Vertigo']};
-function loadVikeyWidget(){var old=document.getElementById('vikeyScript');if(old)old.remove();var s=document.createElement('script');s.id='vikeyScript';s.src='https://storage.googleapis.com/vikey-widgets/bookingengine/vikey-booking-engine-widget.js';s.async=true;document.body.appendChild(s);}
-function openModal(id){const[code,name]=PROP_NAMES[id];document.getElementById('modalCode').textContent=code;document.getElementById('modalTitle').textContent=name;document.getElementById('modalWidget').innerHTML='<div class="vikey-booking-engine-widget" data-client-key="'+VIKEY_KEYS[id]+'" data-vikey-language="en" data-vikey-widget-width="100%"></div>';loadVikeyWidget();document.getElementById('modalOverlay').classList.add('open');document.body.style.overflow='hidden';}
-function closeModalDirect(){document.getElementById('modalOverlay').classList.remove('open');document.getElementById('modalWidget').innerHTML='';document.body.style.overflow='';}
-function closeModal(e){if(e.target===document.getElementById('modalOverlay'))closeModalDirect();}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModalDirect();});
-const gallImgs=["../immagini/img_04.jpg","../immagini/img_12.jpg","../immagini/img_13.jpg","../immagini/img_14.jpg","../immagini/img_15.jpg","../immagini/img_16.jpg"];
-let lbIdx=0;
-function openLb(i){lbIdx=i;document.getElementById('lb').classList.add('open');document.getElementById('lbImg').src=gallImgs[i];document.body.style.overflow='hidden';updateStrip();}
-function closeLb(){document.getElementById('lb').classList.remove('open');document.body.style.overflow='';}
-function lbNext(){lbIdx=(lbIdx+1)%gallImgs.length;document.getElementById('lbImg').src=gallImgs[lbIdx];updateStrip();}
-function lbPrev(){lbIdx=(lbIdx-1+gallImgs.length)%gallImgs.length;document.getElementById('lbImg').src=gallImgs[lbIdx];updateStrip();}
-function updateStrip(){document.querySelectorAll('.gallery-strip img').forEach((el,i)=>el.classList.toggle('active',i===lbIdx));}
-document.addEventListener('keydown',e=>{if(!document.getElementById('lb').classList.contains('open'))return;if(e.key==='ArrowRight')lbNext();if(e.key==='ArrowLeft')lbPrev();if(e.key==='Escape')closeLb();});
-function toggleDimore(btn){var menu=btn.nextElementSibling;var isOpen=menu.classList.toggle('open');btn.setAttribute('aria-expanded',isOpen);if(isOpen){document.addEventListener('click',function closeDimore(e){if(!btn.parentElement.contains(e.target)){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');document.removeEventListener('click',closeDimore);}});}}
-</script>
+<footer class="site-footer"><div class="footer-logo"><img src="../immagini/img_01.webp" alt="Appartamenti Fiorenti" loading="lazy"></div><p class="footer-note">Milan &middot; Appartamenti Fiorenti &middot; All rights reserved</p><div class="footer-links"><a href="index.html">Home</a><a href="vv14.html">Casa di Ringhiera</a><a href="c3a.html">Dimora sul Canale</a><a href="da23.html">Dimora Vertigo</a></div></footer>
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" onclick="closeModalDirect()">&#10005;</button><p class="modal-eyebrow" id="modalCode"></p><h3 class="modal-title" id="modalTitle"></h3><div class="modal-widget" id="modalWidget"></div></div></div>
+<script>var gallImgs=["../immagini/img_04.jpg","../immagini/img_12.jpg","../immagini/img_13.jpg","../immagini/img_14.jpg","../immagini/img_15.jpg","../immagini/img_16.jpg"];var lbIdx=0;</script>
+<script src="../shared.js"></script>
 <button class="book-fab" onclick="openModal('da23')">&#8594; Book</button>
 <script src="../main.js"></script>
 </body>
