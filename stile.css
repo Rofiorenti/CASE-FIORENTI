@@ -44,11 +44,27 @@ body{background:var(--cream);color:var(--ink);font-family:var(--body);line-heigh
 .btn-outline:hover{background:var(--sage-dk);color:var(--cream)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 @keyframes pulse{0%,100%{opacity:.3}50%{opacity:.8}}
+/* Floating book button (FAB) — mobile only */
+.book-fab{display:none}
+@media(max-width:768px){
+  .book-fab{
+    display:flex;align-items:center;gap:.5rem;
+    position:fixed;bottom:1.5rem;right:1.25rem;z-index:150;
+    font-family:var(--sans);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;
+    background:var(--terra);color:var(--cream);
+    padding:.7rem 1.4rem;border:none;cursor:pointer;
+    box-shadow:0 4px 20px rgba(196,103,58,.45);
+    transition:background .2s,box-shadow .2s;
+  }
+  .book-fab:hover{background:var(--sage-dk);box-shadow:0 6px 24px rgba(28,43,34,.3)}
+}
+
 @media(max-width:768px){
   .site-nav{padding:.85rem 1.25rem}
   .nav-logo img{height:44px}
   .nav-links{gap:.75rem}
   .nav-links a:not([data-page="index"]){display:none}
+  .nav-book{display:none}
   .nav-dimore{display:flex;align-items:center;position:relative}
   .nav-dimore-btn{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--sans);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);background:var(--sage-dk);border:none;padding:.5rem 1.25rem;cursor:pointer;transition:background .2s}
   .nav-dimore-btn:hover{background:var(--terra)}

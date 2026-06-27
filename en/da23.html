@@ -113,6 +113,7 @@ function updateStrip(){document.querySelectorAll('.gallery-strip img').forEach((
 document.addEventListener('keydown',e=>{if(!document.getElementById('lb').classList.contains('open'))return;if(e.key==='ArrowRight')lbNext();if(e.key==='ArrowLeft')lbPrev();if(e.key==='Escape')closeLb();});
 function toggleDimore(btn){var menu=btn.nextElementSibling;var isOpen=menu.classList.toggle('open');btn.setAttribute('aria-expanded',isOpen);if(isOpen){document.addEventListener('click',function closeDimore(e){if(!btn.parentElement.contains(e.target)){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');document.removeEventListener('click',closeDimore);}});}}
 </script>
+<button class="book-fab" onclick="openModal('da23')">&#8594; Book</button>
 <script src="../main.js"></script>
 </body>
 </html>
