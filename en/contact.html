@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Contact – Appartamenti Fiorenti Milan</title>
+<meta name="description" content="Contact Appartamenti Fiorenti for information about our Milan residences. We reply within 24 hours.">
+<meta name="robots" content="noindex,follow">
+<link rel="icon" href="../immagini/img_01.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="../stile.css">
+<style>
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2.5rem}
+.contact-block h3{font-family:var(--serif);font-size:1.2rem;font-weight:400;margin-bottom:.75rem;color:var(--ink)}
+.contact-block p{font-size:.95rem;color:#41524A;line-height:1.85}
+.contact-block a{color:var(--terra);text-decoration:underline}
+.contact-divider{height:1px;background:rgba(94,122,107,.15);margin:2.5rem 0}
+.contact-note{font-family:var(--sans);font-size:.78rem;letter-spacing:.04em;color:var(--ash);font-style:italic}
+.cf-heading{font-family:var(--serif);font-size:1.4rem;font-weight:400;margin:0 0 1.25rem;color:var(--ink)}
+.contact-form{display:flex;flex-direction:column;gap:1rem;max-width:560px}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.cf-field{display:flex;flex-direction:column;gap:.35rem}
+.cf-field span{font-family:var(--sans);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ash)}
+.cf-field input,.cf-field textarea{font-family:var(--body);font-size:.95rem;color:var(--ink);background:#fff;border:1px solid rgba(94,122,107,.3);padding:.7rem .85rem;width:100%}
+.cf-field input:focus,.cf-field textarea:focus{outline:2px solid var(--terra);outline-offset:1px;border-color:var(--terra)}
+.cf-field textarea{resize:vertical;min-height:120px}
+.contact-form .btn-primary{align-self:flex-start;border:none}
+.cf-hint{font-family:var(--sans);font-size:.7rem;color:var(--ash);line-height:1.6}
+.cf-error{font-family:var(--sans);font-size:.78rem;color:var(--terra);margin:0}
+@media(max-width:640px){.contact-grid{grid-template-columns:1fr}.cf-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="../immagini/img_01.webp" alt="Appartamenti Fiorenti"></a>
+  <div class="nav-links">
+    <a href="index.html" data-page="index">Home</a>
+    <a href="vv14.html" data-page="vv14">Casa di Ringhiera</a>
+        <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
+        <a href="da23.html" data-page="da23">Dimora Vertigo</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-dimore">
+      <button class="nav-dimore-btn" data-action="toggle-dimore" aria-expanded="false" aria-controls="navDimoreMenu">
+        Residences <span class="nav-dimore-arrow"><span></span><span></span><span></span></span>
+      </button>
+      <div class="nav-dimore-menu" id="navDimoreMenu">
+        <a href="vv14.html" data-page="vv14">Casa di Ringhiera</a>
+        <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
+        <a href="da23.html" data-page="da23">Dimora Vertigo</a>
+      </div>
+    </div>
+    <div class="nav-lang">
+      <a href="../contatti.html" class="nav-lang-opt" aria-label="Versione italiana">IT</a>
+      <span class="nav-lang-sep">|</span>
+      <span class="nav-lang-opt active">EN</span>
+    </div>
+    <button class="nav-book" data-action="book-selector">Book</button>
+  </div>
+</nav>
+
+<div class="static-hero">
+  <p class="section-eyebrow" style="justify-content:center">Get in touch</p>
+  <h1>Contact</h1>
+  <p>We reply to all enquiries within 24 hours</p>
+</div>
+
+<div class="static-body">
+  <div class="contact-grid">
+    <div class="contact-block">
+      <h3>Email</h3>
+      <p>For information about our residences, availability or any other question:<br>
+      <a href="mailto:info@casefiorenti.it">info@casefiorenti.it</a></p>
+    </div>
+    <div class="contact-block">
+      <h3>Direct bookings</h3>
+      <p>You can book directly on our site with no commissions using the <strong>Book</strong> button on any residence page.</p>
+    </div>
+    <div class="contact-block">
+      <h3>Support during your stay</h3>
+      <p>Guests receive direct support contacts at check-in. Assistance available 24/7.</p>
+    </div>
+    <div class="contact-block">
+      <h3>Where we are</h3>
+      <p>All our residences are located in Milan, in central neighbourhoods. The exact address is provided after booking confirmation.</p>
+    </div>
+  </div>
+
+  <div class="contact-divider"></div>
+
+  <h2 class="cf-heading">Write to us</h2>
+  <form id="contactForm" class="contact-form" novalidate>
+    <div class="cf-row">
+      <label class="cf-field">
+        <span>Name</span>
+        <input type="text" name="name" required autocomplete="name">
+      </label>
+      <label class="cf-field">
+        <span>Email</span>
+        <input type="email" name="email" required autocomplete="email">
+      </label>
+    </div>
+    <label class="cf-field">
+      <span>Message</span>
+      <textarea name="message" rows="5" required></textarea>
+    </label>
+    <p class="cf-error" id="cfError" role="alert" hidden></p>
+    <button type="submit" class="btn-primary">Send message</button>
+    <p class="cf-hint">When you press send, your email app will open with the message ready for info@casefiorenti.it.</p>
+  </form>
+
+  <div class="contact-divider"></div>
+
+  <p class="contact-note">For group booking requests, stays longer than 30 days, or commercial partnerships, please write to us with your specific requirements.</p>
+</div>
+<footer class="site-footer">
+  <div class="footer-logo"><img src="../immagini/img_01.webp" alt="Appartamenti Fiorenti" loading="lazy"></div>
+  <p class="footer-note">Milan &middot; Appartamenti Fiorenti &copy; 2026 &middot; All rights reserved</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="vv14.html">Casa di Ringhiera</a>
+    <a href="c3a.html">Dimora sul Canale</a>
+    <a href="da23.html">Dimora Vertigo</a>
+  </div>
+  <div class="footer-legal">
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cookie-policy.html">Cookie Policy</a>
+  </div>
+</footer>
+<div class="modal-overlay" id="modalOverlay" data-action="modal-overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalStep1Title">
+    <button class="modal-close" data-action="modal-close" aria-label="Chiudi">&#10005;</button>
+
+    <!-- STEP 1: selezione residenza -->
+    <div id="modalStep1">
+      <p class="modal-eyebrow">Book</p>
+      <h3 class="modal-title" id="modalStep1Title" style="margin-bottom:1.75rem">Which residence are you interested in?</h3>
+      <div class="prop-selector">
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="vv14">
+          <span class="psel-code">VV14</span>
+          <span class="psel-name">Casa di Ringhiera</span>
+          <span class="psel-detail">2 rooms &middot; 6 guests</span>
+          <span class="psel-arrow">&#8250;</span>
+        </button>
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="c3a">
+          <span class="psel-code">C3A</span>
+          <span class="psel-name">Dimora sul Canale</span>
+          <span class="psel-detail">4 rooms &middot; 8 guests</span>
+          <span class="psel-arrow">&#8250;</span>
+        </button>
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="da23">
+          <span class="psel-code">DA23</span>
+          <span class="psel-name">Dimora Vertigo</span>
+          <span class="psel-detail">1 room &middot; 6 guests</span>
+          <span class="psel-arrow">&#8250;</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 2: widget Vikey -->
+    <div id="modalStep2" style="display:none">
+      <button class="modal-back" data-action="modal-back">&#8592; Change residence</button>
+      <p class="modal-eyebrow" id="modalCode"></p>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <div class="modal-widget" id="modalWidget"></div>
+    </div>
+  </div>
+</div>
+<script src="../catalog.js"></script>
+<script src="../shared.js"></script>
+<button class="book-fab" data-action="book-selector">&#8594; Book</button>
+<script src="../main.js"></script>
+</body>
+</html>

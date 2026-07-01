@@ -1,0 +1,6 @@
+# Tooling locale (server di anteprima) — non fa parte del sito
+.claude/
+
+# Log e file temporanei
+*.log
+.DS_Store

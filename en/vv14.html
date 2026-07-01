@@ -3,18 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Casa di Ringhiera &middot; Appartamenti Fiorenti</title>
-<meta name="description" content="Casa di Ringhiera (VV14): authentic Milanese apartment with high ceilings, original floors and a silent courtyard. Up to 6 guests, 2 bedrooms. Book directly.">
-<meta property="og:title" content="Casa di Ringhiera &middot; Appartamenti Fiorenti">
+<title>Casa di Ringhiera – Milan Apartment 6 Guests | Appartamenti Fiorenti</title>
+<meta name="description" content="Casa di Ringhiera (VV14): authentic Milanese apartment with high ceilings, original floors and a silent courtyard. Up to 6 guests, 2 bedrooms. Book directly with no commissions.">
+<meta property="og:title" content="Casa di Ringhiera · VV14 – Milan Apartment up to 6 Guests">
 <meta property="og:description" content="The authentic Milanese soul. High ceilings, original floors and the silent courtyard that only ringhiera buildings can offer.">
 <meta property="og:image" content="https://casefiorenti.it/immagini/img_02.jpg">
-<meta property="og:type" content="website">
+<meta property="og:type" content="place">
 <meta property="og:url" content="https://casefiorenti.it/en/vv14.html">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="it_IT">
 <link rel="canonical" href="https://casefiorenti.it/en/vv14.html">
 <link rel="alternate" hreflang="it" href="https://casefiorenti.it/vv14.html">
 <link rel="alternate" hreflang="en" href="https://casefiorenti.it/en/vv14.html">
+<link rel="alternate" hreflang="x-default" href="https://casefiorenti.it/vv14.html">
 <link rel="icon" href="../immagini/img_01.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap">
 <link rel="stylesheet" href="../stile.css">
+<link rel="preload" as="image" href="../immagini/img_02.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Apartment",
+  "name": "Casa di Ringhiera",
+  "description": "Authentic Milanese apartment with high ceilings, original floors and a silent courtyard. Up to 6 guests, 2 bedrooms. Direct booking with no commissions.",
+  "url": "https://casefiorenti.it/en/vv14.html",
+  "identifier": "IT015146C2POBM556W",
+  "image": [
+    "https://casefiorenti.it/immagini/img_02.jpg",
+    "https://casefiorenti.it/immagini/img_17.jpg",
+    "https://casefiorenti.it/immagini/img_18.jpg"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Milan",
+    "addressRegion": "MI",
+    "addressCountry": "IT"
+  },
+  "occupancy": {
+    "@type": "QuantitativeValue",
+    "maxValue": 6
+  },
+  "numberOfRooms": 2,
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Fibre-optic Wi-Fi",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Air conditioning",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Fully equipped kitchen",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Washing machine",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Smart TV",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Self check-in 24h",
+      "value": true
+    }
+  ],
+  "containedInPlace": {
+    "@type": "LodgingBusiness",
+    "name": "Appartamenti Fiorenti",
+    "url": "https://casefiorenti.it/en/"
+  }
+}
+</script>
 </head>
 <body>
 <nav class="site-nav">
@@ -22,26 +92,26 @@
   <div class="nav-links">
     <a href="index.html" data-page="index">Home</a>
     <a href="vv14.html" data-page="vv14" class="active">Casa di Ringhiera</a>
-    <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
-    <a href="da23.html" data-page="da23">Dimora Vertigo</a>
+        <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
+        <a href="da23.html" data-page="da23">Dimora Vertigo</a>
   </div>
   <div class="nav-right">
     <div class="nav-dimore">
-      <button class="nav-dimore-btn" onclick="toggleDimore(this)" aria-expanded="false">
+      <button class="nav-dimore-btn" data-action="toggle-dimore" aria-expanded="false" aria-controls="navDimoreMenu">
         Residences <span class="nav-dimore-arrow"><span></span><span></span><span></span></span>
       </button>
-      <div class="nav-dimore-menu">
+      <div class="nav-dimore-menu" id="navDimoreMenu">
         <a href="vv14.html" data-page="vv14" class="active">Casa di Ringhiera</a>
         <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
         <a href="da23.html" data-page="da23">Dimora Vertigo</a>
       </div>
     </div>
     <div class="nav-lang">
-      <a href="../vv14.html" class="nav-lang-opt">IT</a>
+      <a href="../vv14.html" class="nav-lang-opt" aria-label="Versione italiana">IT</a>
       <span class="nav-lang-sep">|</span>
       <span class="nav-lang-opt active">EN</span>
     </div>
-    <button class="nav-book" onclick="openModal('vv14')">Book</button>
+    <button class="nav-book" data-action="book" data-prop="vv14">Book</button>
   </div>
 </nav>
 
@@ -53,9 +123,16 @@
     <h1 class="prop-hero-name">Casa di Ringhiera</h1>
   </div>
 </section>
-<div class="gallery-strip">
-  <img src="../immagini/img_02.jpg" alt="" onclick="openLb(0)" class="active">
-  <img src="../immagini/img_17.jpg" alt="" onclick="openLb(1)" loading="lazy"><img src="../immagini/img_18.jpg" alt="" onclick="openLb(2)" loading="lazy"><img src="../immagini/img_19.jpg" alt="" onclick="openLb(3)" loading="lazy"><img src="../immagini/img_20.jpg" alt="" onclick="openLb(4)" loading="lazy"><img src="../immagini/img_21.jpg" alt="" onclick="openLb(5)" loading="lazy"><img src="../immagini/img_22.jpg" alt="" onclick="openLb(6)" loading="lazy"><img src="../immagini/img_23.jpg" alt="" onclick="openLb(7)" loading="lazy"><img src="../immagini/img_24.jpg" alt="" onclick="openLb(8)" loading="lazy">
+<div class="gallery-strip" data-gallery='["../immagini/img_02.jpg","../immagini/img_17.jpg","../immagini/img_18.jpg","../immagini/img_19.jpg","../immagini/img_20.jpg","../immagini/img_21.jpg","../immagini/img_22.jpg","../immagini/img_23.jpg","../immagini/img_24.jpg"]'>
+  <button class="gallery-thumb active" data-action="lb-open" data-lb="0" aria-label="Casa di Ringhiera – photo 1"><img src="../immagini/img_02.jpg" alt="Casa di Ringhiera – photo 1"></button>
+  <button class="gallery-thumb" data-action="lb-open" data-lb="1" aria-label="Casa di Ringhiera – photo 2"><img src="../immagini/img_17.jpg" alt="Casa di Ringhiera – photo 2" loading="lazy"></button>
+  <button class="gallery-thumb" data-action="lb-open" data-lb="2" aria-label="Casa di Ringhiera – photo 3"><img src="../immagini/img_18.jpg" alt="Casa di Ringhiera – photo 3" loading="lazy"></button>
+  <button class="gallery-thumb" data-action="lb-open" data-lb="3" aria-label="Casa di Ringhiera – photo 4"><img src="../immagini/img_19.jpg" alt="Casa di Ringhiera – photo 4" loading="lazy"></button>
+  <button class="gallery-thumb" data-action="lb-open" data-lb="4" aria-label="Casa di Ringhiera – photo 5"><img src="../immagini/img_20.jpg" alt="Casa di Ringhiera – photo 5" loading="lazy"></button>
+  <button class="gallery-thumb" data-action="lb-open" data-lb="5" aria-label="Casa di Ringhiera – photo 6"><img src="../immagini/img_21.jpg" alt="Casa di Ringhiera – photo 6" loading="lazy"></button>
+  <button class="gallery-thumb" data-action="lb-open" data-lb="6" aria-label="Casa di Ringhiera – photo 7"><img src="../immagini/img_22.jpg" alt="Casa di Ringhiera – photo 7" loading="lazy"></button>
+  <button class="gallery-thumb" data-action="lb-open" data-lb="7" aria-label="Casa di Ringhiera – photo 8"><img src="../immagini/img_23.jpg" alt="Casa di Ringhiera – photo 8" loading="lazy"></button>
+  <button class="gallery-thumb" data-action="lb-open" data-lb="8" aria-label="Casa di Ringhiera – photo 9"><img src="../immagini/img_24.jpg" alt="Casa di Ringhiera – photo 9" loading="lazy"></button>
 </div>
 <div class="prop-content">
   <div class="prop-main">
@@ -65,51 +142,92 @@
     <p>Casa di Ringhiera brings all of this into a modern, comfortable apartment — restored original floors, two bedrooms, a fully equipped kitchen and an unexpected quiet for being right in the city.</p>
     <div class="amenities">
       <h3>Amenities</h3>
-      <div class="amenities-grid">
-        <div class="amenity">Fibre-optic Wi-Fi</div>
-        <div class="amenity">Fully equipped kitchen</div>
-        <div class="amenity">1 double bed</div>
-        <div class="amenity">2 single beds (convertible)</div>
-        <div class="amenity">1 sofa bed</div>
-        <div class="amenity">Washing machine</div>
-        <div class="amenity">Air conditioning</div>
-        <div class="amenity">Smart TV</div>
-        <div class="amenity">Premium linen</div>
-        <div class="amenity">Self check-in (24h)</div>
-        <div class="amenity">Nearby parking</div>
-      </div>
+      <div class="amenities-grid"><div class="amenity">Fibre-optic Wi-Fi</div><div class="amenity">Fully equipped kitchen</div><div class="amenity">1 double bed</div><div class="amenity">2 single beds (convertible)</div><div class="amenity">1 sofa bed</div><div class="amenity">Washing machine</div><div class="amenity">Air conditioning</div><div class="amenity">Smart TV</div><div class="amenity">Premium linen</div><div class="amenity">Self check-in (24h)</div><div class="amenity">Nearby parking</div></div>
     </div>
     <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
-      <button class="btn-primary" onclick="openModal('vv14')">Book now</button>
+      <button class="btn-primary" data-action="book" data-prop="vv14">Book now</button>
       <a href="index.html" class="btn-outline">Other residences</a>
     </div>
   </div>
   <aside class="prop-sidebar">
     <div class="booking-card">
       <p class="bc-title">Casa di Ringhiera</p>
-      <p class="bc-sub">Direct booking &middot; No commissions</p>
+      <p class="bc-sub">Direct booking · No commissions</p>
+      <p class="bc-cin">CIN IT015146C2POBM556W</p>
       <div class="bc-meta">
         <div><p class="bc-m-label">Guests</p><p class="bc-m-val">6</p></div>
         <div><p class="bc-m-label">Rooms</p><p class="bc-m-val">2</p></div>
         <div><p class="bc-m-label">Check-in</p><p class="bc-m-val">15:00</p></div>
+        <div><p class="bc-m-label">From</p><p class="bc-m-val">&euro;224/night</p></div>
       </div>
-      <button class="btn-primary bc-btn" onclick="openModal('vv14')">Check availability</button>
-      <p class="bc-note">Secure payment &middot; Flexible cancellation<br>24/7 support</p>
+      <button class="btn-primary bc-btn" data-action="book" data-prop="vv14">Check availability</button>
+      <p class="bc-note">Secure payment · Flexible cancellation<br>24/7 support</p>
     </div>
   </aside>
 </div>
-<!-- Lightbox -->
-<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Image gallery" onclick="if(event.target===this)closeLb()">
-  <button class="lb-close" onclick="closeLb()">&#10005;</button>
-  <button class="lb-prev" onclick="lbPrev()">&#8249;</button>
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Image gallery" data-action="lb-overlay">
+  <button class="lb-close" data-action="lb-close" aria-label="Chiudi">&#10005;</button>
+  <button class="lb-prev" data-action="lb-prev" aria-label="Precedente">&#8249;</button>
   <img id="lbImg" src="" alt="">
-  <button class="lb-next" onclick="lbNext()">&#8250;</button>
+  <button class="lb-next" data-action="lb-next" aria-label="Successiva">&#8250;</button>
 </div>
-<footer class="site-footer"><div class="footer-logo"><img src="../immagini/img_01.webp" alt="Appartamenti Fiorenti" loading="lazy"></div><p class="footer-note">Milan &middot; Appartamenti Fiorenti &middot; All rights reserved</p><div class="footer-links"><a href="index.html">Home</a><a href="vv14.html">Casa di Ringhiera</a><a href="c3a.html">Dimora sul Canale</a><a href="da23.html">Dimora Vertigo</a></div></footer>
-<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" onclick="closeModalDirect()">&#10005;</button><p class="modal-eyebrow" id="modalCode"></p><h3 class="modal-title" id="modalTitle"></h3><div class="modal-widget" id="modalWidget"></div></div></div>
-<script>var gallImgs=["../immagini/img_02.jpg","../immagini/img_17.jpg","../immagini/img_18.jpg","../immagini/img_19.jpg","../immagini/img_20.jpg","../immagini/img_21.jpg","../immagini/img_22.jpg","../immagini/img_23.jpg","../immagini/img_24.jpg"];var lbIdx=0;</script>
+<footer class="site-footer">
+  <div class="footer-logo"><img src="../immagini/img_01.webp" alt="Appartamenti Fiorenti" loading="lazy"></div>
+  <p class="footer-note">Milan &middot; Appartamenti Fiorenti &copy; 2026 &middot; All rights reserved</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="vv14.html">Casa di Ringhiera</a>
+    <a href="c3a.html">Dimora sul Canale</a>
+    <a href="da23.html">Dimora Vertigo</a>
+  </div>
+  <div class="footer-legal">
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cookie-policy.html">Cookie Policy</a>
+  </div>
+</footer>
+<div class="modal-overlay" id="modalOverlay" data-action="modal-overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalStep1Title">
+    <button class="modal-close" data-action="modal-close" aria-label="Chiudi">&#10005;</button>
+
+    <!-- STEP 1: selezione residenza -->
+    <div id="modalStep1">
+      <p class="modal-eyebrow">Book</p>
+      <h3 class="modal-title" id="modalStep1Title" style="margin-bottom:1.75rem">Which residence are you interested in?</h3>
+      <div class="prop-selector">
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="vv14">
+          <span class="psel-code">VV14</span>
+          <span class="psel-name">Casa di Ringhiera</span>
+          <span class="psel-detail">2 rooms &middot; 6 guests</span>
+          <span class="psel-arrow">&#8250;</span>
+        </button>
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="c3a">
+          <span class="psel-code">C3A</span>
+          <span class="psel-name">Dimora sul Canale</span>
+          <span class="psel-detail">4 rooms &middot; 8 guests</span>
+          <span class="psel-arrow">&#8250;</span>
+        </button>
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="da23">
+          <span class="psel-code">DA23</span>
+          <span class="psel-name">Dimora Vertigo</span>
+          <span class="psel-detail">1 room &middot; 6 guests</span>
+          <span class="psel-arrow">&#8250;</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 2: widget Vikey -->
+    <div id="modalStep2" style="display:none">
+      <button class="modal-back" data-action="modal-back">&#8592; Change residence</button>
+      <p class="modal-eyebrow" id="modalCode"></p>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <div class="modal-widget" id="modalWidget"></div>
+    </div>
+  </div>
+</div>
+<script src="../catalog.js"></script>
 <script src="../shared.js"></script>
-<button class="book-fab" onclick="openModal('vv14')">&#8594; Book</button>
+<button class="book-fab" data-action="book" data-prop="vv14">&#8594; Book</button>
 <script src="../main.js"></script>
 </body>
 </html>

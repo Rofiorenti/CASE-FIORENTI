@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Pagina non trovata – Appartamenti Fiorenti</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="immagini/img_01.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="stile.css">
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><img src="immagini/img_01.webp" alt="Appartamenti Fiorenti"></a>
+  <div class="nav-links">
+    <a href="index.html" data-page="index">Home</a>
+    <a href="vv14.html" data-page="vv14">Casa di Ringhiera</a>
+        <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
+        <a href="da23.html" data-page="da23">Dimora Vertigo</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-dimore">
+      <button class="nav-dimore-btn" data-action="toggle-dimore" aria-expanded="false" aria-controls="navDimoreMenu">
+        Dimore <span class="nav-dimore-arrow"><span></span><span></span><span></span></span>
+      </button>
+      <div class="nav-dimore-menu" id="navDimoreMenu">
+        <a href="vv14.html" data-page="vv14">Casa di Ringhiera</a>
+        <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
+        <a href="da23.html" data-page="da23">Dimora Vertigo</a>
+      </div>
+    </div>
+    <div class="nav-lang">
+      <span class="nav-lang-opt active">IT</span>
+      <span class="nav-lang-sep">|</span>
+      <a href="en/index.html" class="nav-lang-opt" aria-label="English version">EN</a>
+    </div>
+    <button class="nav-book" data-action="book-selector">Prenota</button>
+  </div>
+</nav>
+
+<div class="err-404">
+  <div class="err-code">404</div>
+  <h1>Pagina non trovata</h1>
+  <p>La pagina che stai cercando non esiste o è stata spostata.</p>
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center">
+    <a href="index.html" class="btn-primary">Torna alla home</a>
+    <button class="btn-outline" data-action="book-selector">Prenota una residenza</button>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="footer-logo"><img src="immagini/img_01.webp" alt="Appartamenti Fiorenti" loading="lazy"></div>
+  <p class="footer-note">Milano &middot; Appartamenti Fiorenti &copy; 2026 &middot; Tutti i diritti riservati</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="vv14.html">Casa di Ringhiera</a>
+    <a href="c3a.html">Dimora sul Canale</a>
+    <a href="da23.html">Dimora Vertigo</a>
+  </div>
+  <div class="footer-legal">
+    <a href="contatti.html">Contatti</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cookie-policy.html">Cookie Policy</a>
+  </div>
+</footer>
+<div class="modal-overlay" id="modalOverlay" data-action="modal-overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalStep1Title">
+    <button class="modal-close" data-action="modal-close" aria-label="Chiudi">&#10005;</button>
+
+    <!-- STEP 1: selezione residenza -->
+    <div id="modalStep1">
+      <p class="modal-eyebrow">Prenota</p>
+      <h3 class="modal-title" id="modalStep1Title" style="margin-bottom:1.75rem">Quale residenza ti interessa?</h3>
+      <div class="prop-selector">
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="vv14">
+          <span class="psel-code">VV14</span>
+          <span class="psel-name">Casa di Ringhiera</span>
+          <span class="psel-detail">2 camere &middot; 6 ospiti</span>
+          <span class="psel-arrow">&#8250;</span>
+        </button>
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="c3a">
+          <span class="psel-code">C3A</span>
+          <span class="psel-name">Dimora sul Canale</span>
+          <span class="psel-detail">4 camere &middot; 8 ospiti</span>
+          <span class="psel-arrow">&#8250;</span>
+        </button>
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="da23">
+          <span class="psel-code">DA23</span>
+          <span class="psel-name">Dimora Vertigo</span>
+          <span class="psel-detail">1 camera &middot; 6 ospiti</span>
+          <span class="psel-arrow">&#8250;</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 2: widget Vikey -->
+    <div id="modalStep2" style="display:none">
+      <button class="modal-back" data-action="modal-back">&#8592; Cambia residenza</button>
+      <p class="modal-eyebrow" id="modalCode"></p>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <div class="modal-widget" id="modalWidget"></div>
+    </div>
+  </div>
+</div>
+<script src="catalog.js"></script>
+<script src="shared.js"></script>
+<button class="book-fab" data-action="book-selector">&#8594; Prenota</button>
+<script src="main.js"></script>
+</body>
+</html>

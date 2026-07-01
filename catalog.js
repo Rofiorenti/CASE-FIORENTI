@@ -1,0 +1,2 @@
+/* GENERATO da build.js — non modificare a mano. Fonte: src/data.js */
+window.FIORENTI={"order":["vv14","c3a","da23"],"props":{"vv14":{"code":"VV14","name":"Casa di Ringhiera","vikey":"rQcVj7dswRB0atMM8aXaqZnKJjsRdDVrx384GCmFqt4"},"c3a":{"code":"C3A","name":"Dimora sul Canale","vikey":"rQcVj7dswRB0atMM8aXaqZnKJ2cfUVNDx384GCmFqt4"},"da23":{"code":"DA23","name":"Dimora Vertigo","vikey":"rQcVj7dswRB0atMM8aXaqZy_JxxjTzRJx384GCmFqt4"}}};

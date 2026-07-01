@@ -3,18 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Home &middot; Appartamenti Fiorenti</title>
-<meta name="description" content="Three signature residences in the heart of Milan. Book directly with no commissions: Casa di Ringhiera, Dimora sul Canale, Dimora Vertigo.">
-<meta property="og:title" content="Appartamenti Fiorenti &middot; Milan">
+<title>Appartamenti Fiorenti Milan – Luxury Short-Term Rentals, No Commission</title>
+<meta name="description" content="Three signature residences in the heart of Milan. Book directly with no commissions: Casa di Ringhiera, Dimora sul Canale near Navigli, Dimora Vertigo near the Duomo.">
+<meta property="og:title" content="Appartamenti Fiorenti · Milan – Three Signature Residences">
 <meta property="og:description" content="Three signature residences in the heart of Milan. Book directly with no commissions.">
 <meta property="og:image" content="https://casefiorenti.it/immagini/img_02.jpg">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://casefiorenti.it/en/">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="it_IT">
 <link rel="canonical" href="https://casefiorenti.it/en/">
 <link rel="alternate" hreflang="it" href="https://casefiorenti.it/">
 <link rel="alternate" hreflang="en" href="https://casefiorenti.it/en/">
+<link rel="alternate" hreflang="x-default" href="https://casefiorenti.it/">
 <link rel="icon" href="../immagini/img_01.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap">
 <link rel="stylesheet" href="../stile.css">
+<link rel="preload" as="image" href="../immagini/img_02.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Appartamenti Fiorenti",
+  "description": "Three signature residences in the heart of Milan for short-term rentals. Direct booking with no commissions.",
+  "url": "https://casefiorenti.it/en/",
+  "image": "https://casefiorenti.it/immagini/img_02.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Milan",
+    "addressRegion": "MI",
+    "addressCountry": "IT"
+  },
+  "inLanguage": [
+    "it",
+    "en"
+  ],
+  "containsPlace": [
+    {
+      "@type": "Apartment",
+      "name": "Casa di Ringhiera",
+      "description": "The authentic Milanese soul. High ceilings, original floors and the silent courtyard that only ringhiera buildings can offer.",
+      "url": "https://casefiorenti.it/en/vv14.html",
+      "image": "https://casefiorenti.it/immagini/img_02.jpg",
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "maxValue": 6
+      },
+      "numberOfRooms": 2,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Milan",
+        "addressCountry": "IT"
+      }
+    },
+    {
+      "@type": "Apartment",
+      "name": "Dimora sul Canale",
+      "description": "Navigli, aperitivos and neighbourhood life. A bright apartment steps away from Milan's most authentic atmosphere.",
+      "url": "https://casefiorenti.it/en/c3a.html",
+      "image": "https://casefiorenti.it/immagini/img_03.jpg",
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "maxValue": 8
+      },
+      "numberOfRooms": 4,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Milan",
+        "addressCountry": "IT"
+      }
+    },
+    {
+      "@type": "Apartment",
+      "name": "Dimora Vertigo",
+      "description": "Unexpected perspectives in the heart of Milan. An apartment close to iconic landmarks.",
+      "url": "https://casefiorenti.it/en/da23.html",
+      "image": "https://casefiorenti.it/immagini/img_04.jpg",
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "maxValue": 6
+      },
+      "numberOfRooms": 1,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Milan",
+        "addressCountry": "IT"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="site-nav">
@@ -22,26 +102,26 @@
   <div class="nav-links">
     <a href="index.html" data-page="index" class="active">Home</a>
     <a href="vv14.html" data-page="vv14">Casa di Ringhiera</a>
-    <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
-    <a href="da23.html" data-page="da23">Dimora Vertigo</a>
+        <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
+        <a href="da23.html" data-page="da23">Dimora Vertigo</a>
   </div>
   <div class="nav-right">
     <div class="nav-dimore">
-      <button class="nav-dimore-btn" onclick="toggleDimore(this)" aria-expanded="false">
+      <button class="nav-dimore-btn" data-action="toggle-dimore" aria-expanded="false" aria-controls="navDimoreMenu">
         Residences <span class="nav-dimore-arrow"><span></span><span></span><span></span></span>
       </button>
-      <div class="nav-dimore-menu">
+      <div class="nav-dimore-menu" id="navDimoreMenu">
         <a href="vv14.html" data-page="vv14">Casa di Ringhiera</a>
         <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
         <a href="da23.html" data-page="da23">Dimora Vertigo</a>
       </div>
     </div>
     <div class="nav-lang">
-      <a href="../index.html" class="nav-lang-opt">IT</a>
+      <a href="../index.html" class="nav-lang-opt" aria-label="Versione italiana">IT</a>
       <span class="nav-lang-sep">|</span>
       <span class="nav-lang-opt active">EN</span>
     </div>
-    <button class="nav-book" onclick="openSelector()">Book</button>
+    <button class="nav-book" data-action="book-selector">Book</button>
   </div>
 </nav>
 
@@ -49,6 +129,7 @@
   <div class="hero-bg-idx" id="heroBg" style="background-image:url('../immagini/img_02.jpg')"></div>
   <div class="hero-dots-idx" id="heroDots"></div>
   <div class="hero-content-idx">
+    <h1 class="sr-only">Appartamenti Fiorenti – Luxury Short-Term Rentals in Milan</h1>
     <img src="../immagini/img_01.webp" alt="Appartamenti Fiorenti" class="hero-logo-lg">
     <p class="hero-tagline">Three signature residences in the heart of Milan</p>
     <div class="hero-ctas">
@@ -59,55 +140,111 @@
 <div class="divider">&#10022; &#10022; &#10022;</div>
 <section class="intro-sec">
   <p class="section-eyebrow">Our philosophy</p>
-  <h2>We don&apos;t rent apartments.<br>We offer a way to live Milan.</h2>
+  <h2>We don't rent apartments.<br>We offer a way to live Milan.</h2>
   <p>Every residence is crafted down to the last detail: from materials to furnishings, from linen to natural light. Three distinct characters, one constant care.</p>
 </section>
 <section class="props-sec" id="residenze">
   <p class="section-eyebrow" style="margin-bottom:3rem">The Residences</p>
   <div class="props-grid">
-    <a href="vv14.html" class="pc">
-      <div class="pc-vis"><img src="../immagini/img_02.jpg" alt="Casa di Ringhiera" loading="lazy"><div class="pc-badge">Available</div><div class="pc-name-ov">Casa di<br>Ringhiera</div></div>
-      <div class="pc-body"><p class="pc-code">VV14 &middot; Milan</p><p class="pc-desc">The authentic Milanese soul. High ceilings, original floors and the silent courtyard that only ringhiera buildings can offer.</p>
-      <div class="pc-meta"><div><p class="pc-ml">Guests</p><p class="pc-mv">6</p></div><div><p class="pc-ml">Rooms</p><p class="pc-mv">2</p></div><div><p class="pc-ml">Check-in</p><p class="pc-mv">15:00</p></div></div></div>
-      <div class="pc-ctas"><span class="btn-outline" style="font-size:.62rem">Discover &rarr;</span><button class="btn-primary" style="font-size:.62rem" onclick="event.preventDefault();openModal('vv14')">Book</button></div>
-    </a>
-    <a href="c3a.html" class="pc">
-      <div class="pc-vis"><img src="../immagini/img_03.jpg" alt="Dimora sul Canale" loading="lazy"><div class="pc-badge">Available</div><div class="pc-name-ov">Dimora<br>sul Canale</div></div>
-      <div class="pc-body"><p class="pc-code">C3A &middot; Milan</p><p class="pc-desc">Navigli, aperitivos and neighbourhood life. A bright apartment steps away from the city&apos;s most authentic atmosphere.</p>
-      <div class="pc-meta"><div><p class="pc-ml">Guests</p><p class="pc-mv">8</p></div><div><p class="pc-ml">Rooms</p><p class="pc-mv">4</p></div><div><p class="pc-ml">Check-in</p><p class="pc-mv">15:00</p></div></div></div>
-      <div class="pc-ctas"><span class="btn-outline" style="font-size:.62rem">Discover &rarr;</span><button class="btn-primary" style="font-size:.62rem" onclick="event.preventDefault();openModal('c3a')">Book</button></div>
-    </a>
-    <a href="da23.html" class="pc">
-      <div class="pc-vis"><img src="../immagini/img_04.jpg" alt="Dimora Vertigo" loading="lazy"><div class="pc-badge">Available</div><div class="pc-name-ov">Dimora<br>Vertigo</div></div>
-      <div class="pc-body"><p class="pc-code">DA23 &middot; Milan</p><p class="pc-desc">Unexpected perspectives in the heart of Milan. An apartment that plays with heights and depths, close to iconic landmarks.</p>
-      <div class="pc-meta"><div><p class="pc-ml">Guests</p><p class="pc-mv">6</p></div><div><p class="pc-ml">Rooms</p><p class="pc-mv">1</p></div><div><p class="pc-ml">Check-in</p><p class="pc-mv">14:00</p></div></div></div>
-      <div class="pc-ctas"><span class="btn-outline" style="font-size:.62rem">Discover &rarr;</span><button class="btn-primary" style="font-size:.62rem" onclick="event.preventDefault();openModal('da23')">Book</button></div>
-    </a>
+    <article class="pc">
+      <a class="pc-link" href="vv14.html">
+        <div class="pc-vis"><img src="../immagini/img_02.jpg" alt="Casa di Ringhiera" loading="lazy"><div class="pc-badge">Available</div><div class="pc-name-ov">Casa di<br>Ringhiera</div></div>
+        <div class="pc-body">
+          <p class="pc-code">VV14 &middot; Milan</p>
+          <p class="pc-desc">The authentic Milanese soul. High ceilings, original floors and the silent courtyard that only ringhiera buildings can offer.</p>
+          <div class="pc-meta">
+            <div><p class="pc-ml">Guests</p><p class="pc-mv">6</p></div>
+            <div><p class="pc-ml">Rooms</p><p class="pc-mv">2</p></div>
+            <div><p class="pc-ml">Check-in</p><p class="pc-mv">15:00</p></div>
+            <div><p class="pc-ml">From</p><p class="pc-mv">&euro;224/night</p></div>
+          </div>
+          <p class="pc-cin">CIN IT015146C2POBM556W</p>
+        </div>
+      </a>
+      <div class="pc-ctas">
+        <a class="btn-outline" href="vv14.html" style="font-size:.62rem">Discover &rarr;</a>
+        <button class="btn-primary" style="font-size:.62rem" data-action="book" data-prop="vv14">Book</button>
+      </div>
+    </article>
+    <article class="pc">
+      <a class="pc-link" href="c3a.html">
+        <div class="pc-vis"><img src="../immagini/img_03.jpg" alt="Dimora sul Canale" loading="lazy"><div class="pc-badge">Available</div><div class="pc-name-ov">Dimora<br>sul Canale</div></div>
+        <div class="pc-body">
+          <p class="pc-code">C3A &middot; Milan</p>
+          <p class="pc-desc">Navigli, aperitivos and neighbourhood life. A bright apartment steps away from the city's most authentic atmosphere.</p>
+          <div class="pc-meta">
+            <div><p class="pc-ml">Guests</p><p class="pc-mv">8</p></div>
+            <div><p class="pc-ml">Rooms</p><p class="pc-mv">4</p></div>
+            <div><p class="pc-ml">Check-in</p><p class="pc-mv">15:00</p></div>
+            <div><p class="pc-ml">From</p><p class="pc-mv">&euro;438/night</p></div>
+          </div>
+          <p class="pc-cin">CIN IT015146C2L8X2HZJ2</p>
+        </div>
+      </a>
+      <div class="pc-ctas">
+        <a class="btn-outline" href="c3a.html" style="font-size:.62rem">Discover &rarr;</a>
+        <button class="btn-primary" style="font-size:.62rem" data-action="book" data-prop="c3a">Book</button>
+      </div>
+    </article>
+    <article class="pc">
+      <a class="pc-link" href="da23.html">
+        <div class="pc-vis"><img src="../immagini/img_04.jpg" alt="Dimora Vertigo" loading="lazy"><div class="pc-badge">Available</div><div class="pc-name-ov">Dimora<br>Vertigo</div></div>
+        <div class="pc-body">
+          <p class="pc-code">DA23 &middot; Milan</p>
+          <p class="pc-desc">Unexpected perspectives in the heart of Milan. An apartment that plays with heights and depths, close to iconic landmarks.</p>
+          <div class="pc-meta">
+            <div><p class="pc-ml">Guests</p><p class="pc-mv">6</p></div>
+            <div><p class="pc-ml">Rooms</p><p class="pc-mv">1</p></div>
+            <div><p class="pc-ml">Check-in</p><p class="pc-mv">14:00</p></div>
+            <div><p class="pc-ml">From</p><p class="pc-mv">&euro;216/night</p></div>
+          </div>
+          <p class="pc-cin">CIN IT015146C2N23WNVKF</p>
+        </div>
+      </a>
+      <div class="pc-ctas">
+        <a class="btn-outline" href="da23.html" style="font-size:.62rem">Discover &rarr;</a>
+        <button class="btn-primary" style="font-size:.62rem" data-action="book" data-prop="da23">Book</button>
+      </div>
+    </article>
   </div>
 </section>
-<footer class="site-footer"><div class="footer-logo"><img src="../immagini/img_01.webp" alt="Appartamenti Fiorenti" loading="lazy"></div><p class="footer-note">Milan &middot; Appartamenti Fiorenti &middot; All rights reserved</p><div class="footer-links"><a href="index.html">Home</a><a href="vv14.html">Casa di Ringhiera</a><a href="c3a.html">Dimora sul Canale</a><a href="da23.html">Dimora Vertigo</a></div></footer>
-<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button class="modal-close" onclick="closeModalDirect()">&#10005;</button>
+<footer class="site-footer">
+  <div class="footer-logo"><img src="../immagini/img_01.webp" alt="Appartamenti Fiorenti" loading="lazy"></div>
+  <p class="footer-note">Milan &middot; Appartamenti Fiorenti &copy; 2026 &middot; All rights reserved</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="vv14.html">Casa di Ringhiera</a>
+    <a href="c3a.html">Dimora sul Canale</a>
+    <a href="da23.html">Dimora Vertigo</a>
+  </div>
+  <div class="footer-legal">
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cookie-policy.html">Cookie Policy</a>
+  </div>
+</footer>
+<div class="modal-overlay" id="modalOverlay" data-action="modal-overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalStep1Title">
+    <button class="modal-close" data-action="modal-close" aria-label="Chiudi">&#10005;</button>
 
-    <!-- STEP 1: property selection -->
+    <!-- STEP 1: selezione residenza -->
     <div id="modalStep1">
       <p class="modal-eyebrow">Book</p>
-      <h3 class="modal-title" style="margin-bottom:1.75rem">Which residence interests you?</h3>
+      <h3 class="modal-title" id="modalStep1Title" style="margin-bottom:1.75rem">Which residence are you interested in?</h3>
       <div class="prop-selector">
-        <button class="prop-sel-btn" onclick="selectProp('vv14')">
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="vv14">
           <span class="psel-code">VV14</span>
           <span class="psel-name">Casa di Ringhiera</span>
           <span class="psel-detail">2 rooms &middot; 6 guests</span>
           <span class="psel-arrow">&#8250;</span>
         </button>
-        <button class="prop-sel-btn" onclick="selectProp('c3a')">
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="c3a">
           <span class="psel-code">C3A</span>
           <span class="psel-name">Dimora sul Canale</span>
           <span class="psel-detail">4 rooms &middot; 8 guests</span>
           <span class="psel-arrow">&#8250;</span>
         </button>
-        <button class="prop-sel-btn" onclick="selectProp('da23')">
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="da23">
           <span class="psel-code">DA23</span>
           <span class="psel-name">Dimora Vertigo</span>
           <span class="psel-detail">1 room &middot; 6 guests</span>
@@ -116,17 +253,18 @@
       </div>
     </div>
 
-    <!-- STEP 2: Vikey widget -->
+    <!-- STEP 2: widget Vikey -->
     <div id="modalStep2" style="display:none">
-      <button class="modal-back" onclick="backToSelector()">&#8592; Change residence</button>
+      <button class="modal-back" data-action="modal-back">&#8592; Change residence</button>
       <p class="modal-eyebrow" id="modalCode"></p>
       <h3 class="modal-title" id="modalTitle"></h3>
       <div class="modal-widget" id="modalWidget"></div>
     </div>
   </div>
 </div>
+<script src="../catalog.js"></script>
 <script src="../shared.js"></script>
-<button class="book-fab" onclick="openSelector()">&#8594; Book</button>
+<button class="book-fab" data-action="book-selector">&#8594; Book</button>
 <script src="../main.js"></script>
 </body>
 </html>

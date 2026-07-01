@@ -3,18 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Home &middot; Appartamenti Fiorenti</title>
-<meta name="description" content="Tre residenze d'autore nel cuore di Milano. Prenota direttamente senza commissioni: Casa di Ringhiera, Dimora sul Canale, Dimora Vertigo.">
-<meta property="og:title" content="Appartamenti Fiorenti &middot; Milano">
+<title>Appartamenti Fiorenti Milano – Affitti Brevi di Lusso senza Commissioni</title>
+<meta name="description" content="Tre residenze d'autore nel cuore di Milano. Prenota direttamente senza commissioni: Casa di Ringhiera ai Navigli, Dimora sul Canale, Dimora Vertigo vicino al Duomo.">
+<meta property="og:title" content="Appartamenti Fiorenti · Milano – Tre Residenze d'Autore">
 <meta property="og:description" content="Tre residenze d'autore nel cuore di Milano. Prenota direttamente senza commissioni.">
 <meta property="og:image" content="https://casefiorenti.it/immagini/img_02.jpg">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://casefiorenti.it/">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
 <link rel="canonical" href="https://casefiorenti.it/">
 <link rel="alternate" hreflang="it" href="https://casefiorenti.it/">
 <link rel="alternate" hreflang="en" href="https://casefiorenti.it/en/">
+<link rel="alternate" hreflang="x-default" href="https://casefiorenti.it/">
 <link rel="icon" href="immagini/img_01.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap">
 <link rel="stylesheet" href="stile.css">
+<link rel="preload" as="image" href="immagini/img_02.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Appartamenti Fiorenti",
+  "description": "Tre residenze d'autore nel cuore di Milano per affitti brevi. Prenotazione diretta senza commissioni.",
+  "url": "https://casefiorenti.it/",
+  "image": "https://casefiorenti.it/immagini/img_02.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Milano",
+    "addressRegion": "MI",
+    "addressCountry": "IT"
+  },
+  "inLanguage": [
+    "it",
+    "en"
+  ],
+  "containsPlace": [
+    {
+      "@type": "Apartment",
+      "name": "Casa di Ringhiera",
+      "description": "L'anima milanese autentica. Soffitti alti, pavimenti originali e il cortile silenzioso che solo gli edifici di ringhiera sanno offrire.",
+      "url": "https://casefiorenti.it/vv14.html",
+      "image": "https://casefiorenti.it/immagini/img_02.jpg",
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "maxValue": 6
+      },
+      "numberOfRooms": 2,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Milano",
+        "addressCountry": "IT"
+      }
+    },
+    {
+      "@type": "Apartment",
+      "name": "Dimora sul Canale",
+      "description": "Navigli, aperitivi e vita di quartiere. Un appartamento luminoso a pochi passi dalla movida più autentica della città.",
+      "url": "https://casefiorenti.it/c3a.html",
+      "image": "https://casefiorenti.it/immagini/img_03.jpg",
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "maxValue": 8
+      },
+      "numberOfRooms": 4,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Milano",
+        "addressCountry": "IT"
+      }
+    },
+    {
+      "@type": "Apartment",
+      "name": "Dimora Vertigo",
+      "description": "Prospettive inaspettate nel cuore di Milano. Un appartamento vicino ai monumenti iconici.",
+      "url": "https://casefiorenti.it/da23.html",
+      "image": "https://casefiorenti.it/immagini/img_04.jpg",
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "maxValue": 6
+      },
+      "numberOfRooms": 1,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Milano",
+        "addressCountry": "IT"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="site-nav">
@@ -22,15 +102,15 @@
   <div class="nav-links">
     <a href="index.html" data-page="index" class="active">Home</a>
     <a href="vv14.html" data-page="vv14">Casa di Ringhiera</a>
-    <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
-    <a href="da23.html" data-page="da23">Dimora Vertigo</a>
+        <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
+        <a href="da23.html" data-page="da23">Dimora Vertigo</a>
   </div>
   <div class="nav-right">
     <div class="nav-dimore">
-      <button class="nav-dimore-btn" onclick="toggleDimore(this)" aria-expanded="false">
+      <button class="nav-dimore-btn" data-action="toggle-dimore" aria-expanded="false" aria-controls="navDimoreMenu">
         Dimore <span class="nav-dimore-arrow"><span></span><span></span><span></span></span>
       </button>
-      <div class="nav-dimore-menu">
+      <div class="nav-dimore-menu" id="navDimoreMenu">
         <a href="vv14.html" data-page="vv14">Casa di Ringhiera</a>
         <a href="c3a.html" data-page="c3a">Dimora sul Canale</a>
         <a href="da23.html" data-page="da23">Dimora Vertigo</a>
@@ -39,9 +119,9 @@
     <div class="nav-lang">
       <span class="nav-lang-opt active">IT</span>
       <span class="nav-lang-sep">|</span>
-      <a href="en/index.html" class="nav-lang-opt">EN</a>
+      <a href="en/index.html" class="nav-lang-opt" aria-label="English version">EN</a>
     </div>
-    <button class="nav-book" onclick="openSelector()">Prenota</button>
+    <button class="nav-book" data-action="book-selector">Prenota</button>
   </div>
 </nav>
 
@@ -49,8 +129,9 @@
   <div class="hero-bg-idx" id="heroBg" style="background-image:url('immagini/img_02.jpg')"></div>
   <div class="hero-dots-idx" id="heroDots"></div>
   <div class="hero-content-idx">
+    <h1 class="sr-only">Appartamenti Fiorenti – Affitti brevi di lusso a Milano</h1>
     <img src="immagini/img_01.webp" alt="Appartamenti Fiorenti" class="hero-logo-lg">
-    <p class="hero-tagline">Tre residenze d&apos;autore nel cuore di Milano</p>
+    <p class="hero-tagline">Tre residenze d'autore nel cuore di Milano</p>
     <div class="hero-ctas">
       <a href="#residenze" class="btn-primary">Scopri le residenze</a>
     </div>
@@ -60,54 +141,110 @@
 <section class="intro-sec">
   <p class="section-eyebrow">La nostra filosofia</p>
   <h2>Non affittiamo appartamenti.<br>Offriamo un modo di vivere Milano.</h2>
-  <p>Ogni residenza &egrave; curata nei minimi dettagli: dai materiali agli arredi, dalla biancheria alla luce naturale. Tre caratteri diversi, un&apos;unica cura costante.</p>
+  <p>Ogni residenza è curata nei minimi dettagli: dai materiali agli arredi, dalla biancheria alla luce naturale. Tre caratteri diversi, un'unica cura costante.</p>
 </section>
 <section class="props-sec" id="residenze">
   <p class="section-eyebrow" style="margin-bottom:3rem">Le Residenze</p>
   <div class="props-grid">
-    <a href="vv14.html" class="pc">
-      <div class="pc-vis"><img src="immagini/img_02.jpg" alt="Casa di Ringhiera" loading="lazy"><div class="pc-badge">Disponibile</div><div class="pc-name-ov">Casa di<br>Ringhiera</div></div>
-      <div class="pc-body"><p class="pc-code">VV14 &middot; Milano</p><p class="pc-desc">L&apos;anima milanese autentica. Soffitti alti, pavimenti originali e il cortile silenzioso che solo gli edifici di ringhiera sanno offrire.</p>
-      <div class="pc-meta"><div><p class="pc-ml">Ospiti</p><p class="pc-mv">6</p></div><div><p class="pc-ml">Camere</p><p class="pc-mv">2</p></div><div><p class="pc-ml">Check-in</p><p class="pc-mv">15:00</p></div></div></div>
-      <div class="pc-ctas"><span class="btn-outline" style="font-size:.62rem">Scopri &rarr;</span><button class="btn-primary" style="font-size:.62rem" onclick="event.preventDefault();openModal('vv14')">Prenota</button></div>
-    </a>
-    <a href="c3a.html" class="pc">
-      <div class="pc-vis"><img src="immagini/img_03.jpg" alt="Dimora sul Canale" loading="lazy"><div class="pc-badge">Disponibile</div><div class="pc-name-ov">Dimora<br>sul Canale</div></div>
-      <div class="pc-body"><p class="pc-code">C3A &middot; Milano</p><p class="pc-desc">Navigli, aperitivi e vita di quartiere. Un appartamento luminoso a pochi passi dalla movida pi&ugrave; autentica della citt&agrave;.</p>
-      <div class="pc-meta"><div><p class="pc-ml">Ospiti</p><p class="pc-mv">8</p></div><div><p class="pc-ml">Camere</p><p class="pc-mv">4</p></div><div><p class="pc-ml">Check-in</p><p class="pc-mv">15:00</p></div></div></div>
-      <div class="pc-ctas"><span class="btn-outline" style="font-size:.62rem">Scopri &rarr;</span><button class="btn-primary" style="font-size:.62rem" onclick="event.preventDefault();openModal('c3a')">Prenota</button></div>
-    </a>
-    <a href="da23.html" class="pc">
-      <div class="pc-vis"><img src="immagini/img_04.jpg" alt="Dimora Vertigo" loading="lazy"><div class="pc-badge">Disponibile</div><div class="pc-name-ov">Dimora<br>Vertigo</div></div>
-      <div class="pc-body"><p class="pc-code">DA23 &middot; Milano</p><p class="pc-desc">Prospettive inaspettate nel cuore di Milano. Un appartamento che gioca con altezze e profondit&agrave;, vicino ai monumenti iconici.</p>
-      <div class="pc-meta"><div><p class="pc-ml">Ospiti</p><p class="pc-mv">6</p></div><div><p class="pc-ml">Camere</p><p class="pc-mv">1</p></div><div><p class="pc-ml">Check-in</p><p class="pc-mv">14:00</p></div></div></div>
-      <div class="pc-ctas"><span class="btn-outline" style="font-size:.62rem">Scopri &rarr;</span><button class="btn-primary" style="font-size:.62rem" onclick="event.preventDefault();openModal('da23')">Prenota</button></div>
-    </a>
+    <article class="pc">
+      <a class="pc-link" href="vv14.html">
+        <div class="pc-vis"><img src="immagini/img_02.jpg" alt="Casa di Ringhiera" loading="lazy"><div class="pc-badge">Disponibile</div><div class="pc-name-ov">Casa di<br>Ringhiera</div></div>
+        <div class="pc-body">
+          <p class="pc-code">VV14 &middot; Milano</p>
+          <p class="pc-desc">L'anima milanese autentica. Soffitti alti, pavimenti originali e il cortile silenzioso che solo gli edifici di ringhiera sanno offrire.</p>
+          <div class="pc-meta">
+            <div><p class="pc-ml">Ospiti</p><p class="pc-mv">6</p></div>
+            <div><p class="pc-ml">Camere</p><p class="pc-mv">2</p></div>
+            <div><p class="pc-ml">Check-in</p><p class="pc-mv">15:00</p></div>
+            <div><p class="pc-ml">Da</p><p class="pc-mv">&euro;224/notte</p></div>
+          </div>
+          <p class="pc-cin">CIN IT015146C2POBM556W</p>
+        </div>
+      </a>
+      <div class="pc-ctas">
+        <a class="btn-outline" href="vv14.html" style="font-size:.62rem">Scopri &rarr;</a>
+        <button class="btn-primary" style="font-size:.62rem" data-action="book" data-prop="vv14">Prenota</button>
+      </div>
+    </article>
+    <article class="pc">
+      <a class="pc-link" href="c3a.html">
+        <div class="pc-vis"><img src="immagini/img_03.jpg" alt="Dimora sul Canale" loading="lazy"><div class="pc-badge">Disponibile</div><div class="pc-name-ov">Dimora<br>sul Canale</div></div>
+        <div class="pc-body">
+          <p class="pc-code">C3A &middot; Milano</p>
+          <p class="pc-desc">Navigli, aperitivi e vita di quartiere. Un appartamento luminoso a pochi passi dalla movida più autentica della città.</p>
+          <div class="pc-meta">
+            <div><p class="pc-ml">Ospiti</p><p class="pc-mv">8</p></div>
+            <div><p class="pc-ml">Camere</p><p class="pc-mv">4</p></div>
+            <div><p class="pc-ml">Check-in</p><p class="pc-mv">15:00</p></div>
+            <div><p class="pc-ml">Da</p><p class="pc-mv">&euro;438/notte</p></div>
+          </div>
+          <p class="pc-cin">CIN IT015146C2L8X2HZJ2</p>
+        </div>
+      </a>
+      <div class="pc-ctas">
+        <a class="btn-outline" href="c3a.html" style="font-size:.62rem">Scopri &rarr;</a>
+        <button class="btn-primary" style="font-size:.62rem" data-action="book" data-prop="c3a">Prenota</button>
+      </div>
+    </article>
+    <article class="pc">
+      <a class="pc-link" href="da23.html">
+        <div class="pc-vis"><img src="immagini/img_04.jpg" alt="Dimora Vertigo" loading="lazy"><div class="pc-badge">Disponibile</div><div class="pc-name-ov">Dimora<br>Vertigo</div></div>
+        <div class="pc-body">
+          <p class="pc-code">DA23 &middot; Milano</p>
+          <p class="pc-desc">Prospettive inaspettate nel cuore di Milano. Un appartamento che gioca con altezze e profondità, vicino ai monumenti iconici.</p>
+          <div class="pc-meta">
+            <div><p class="pc-ml">Ospiti</p><p class="pc-mv">6</p></div>
+            <div><p class="pc-ml">Camere</p><p class="pc-mv">1</p></div>
+            <div><p class="pc-ml">Check-in</p><p class="pc-mv">14:00</p></div>
+            <div><p class="pc-ml">Da</p><p class="pc-mv">&euro;216/notte</p></div>
+          </div>
+          <p class="pc-cin">CIN IT015146C2N23WNVKF</p>
+        </div>
+      </a>
+      <div class="pc-ctas">
+        <a class="btn-outline" href="da23.html" style="font-size:.62rem">Scopri &rarr;</a>
+        <button class="btn-primary" style="font-size:.62rem" data-action="book" data-prop="da23">Prenota</button>
+      </div>
+    </article>
   </div>
 </section>
-<footer class="site-footer"><div class="footer-logo"><img src="immagini/img_01.webp" alt="Appartamenti Fiorenti" loading="lazy"></div><p class="footer-note">Milano &middot; Appartamenti Fiorenti &middot; Tutti i diritti riservati</p><div class="footer-links"><a href="index.html">Home</a><a href="vv14.html">Casa di Ringhiera</a><a href="c3a.html">Dimora sul Canale</a><a href="da23.html">Dimora Vertigo</a></div></footer>
-<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button class="modal-close" onclick="closeModalDirect()">&#10005;</button>
+<footer class="site-footer">
+  <div class="footer-logo"><img src="immagini/img_01.webp" alt="Appartamenti Fiorenti" loading="lazy"></div>
+  <p class="footer-note">Milano &middot; Appartamenti Fiorenti &copy; 2026 &middot; Tutti i diritti riservati</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="vv14.html">Casa di Ringhiera</a>
+    <a href="c3a.html">Dimora sul Canale</a>
+    <a href="da23.html">Dimora Vertigo</a>
+  </div>
+  <div class="footer-legal">
+    <a href="contatti.html">Contatti</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cookie-policy.html">Cookie Policy</a>
+  </div>
+</footer>
+<div class="modal-overlay" id="modalOverlay" data-action="modal-overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalStep1Title">
+    <button class="modal-close" data-action="modal-close" aria-label="Chiudi">&#10005;</button>
 
-    <!-- STEP 1: selezione proprietà -->
+    <!-- STEP 1: selezione residenza -->
     <div id="modalStep1">
       <p class="modal-eyebrow">Prenota</p>
-      <h3 class="modal-title" style="margin-bottom:1.75rem">Quale residenza ti interessa?</h3>
+      <h3 class="modal-title" id="modalStep1Title" style="margin-bottom:1.75rem">Quale residenza ti interessa?</h3>
       <div class="prop-selector">
-        <button class="prop-sel-btn" onclick="selectProp('vv14')">
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="vv14">
           <span class="psel-code">VV14</span>
           <span class="psel-name">Casa di Ringhiera</span>
           <span class="psel-detail">2 camere &middot; 6 ospiti</span>
           <span class="psel-arrow">&#8250;</span>
         </button>
-        <button class="prop-sel-btn" onclick="selectProp('c3a')">
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="c3a">
           <span class="psel-code">C3A</span>
           <span class="psel-name">Dimora sul Canale</span>
           <span class="psel-detail">4 camere &middot; 8 ospiti</span>
           <span class="psel-arrow">&#8250;</span>
         </button>
-        <button class="prop-sel-btn" onclick="selectProp('da23')">
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="da23">
           <span class="psel-code">DA23</span>
           <span class="psel-name">Dimora Vertigo</span>
           <span class="psel-detail">1 camera &middot; 6 ospiti</span>
@@ -118,15 +255,16 @@
 
     <!-- STEP 2: widget Vikey -->
     <div id="modalStep2" style="display:none">
-      <button class="modal-back" onclick="backToSelector()">&#8592; Cambia residenza</button>
+      <button class="modal-back" data-action="modal-back">&#8592; Cambia residenza</button>
       <p class="modal-eyebrow" id="modalCode"></p>
       <h3 class="modal-title" id="modalTitle"></h3>
       <div class="modal-widget" id="modalWidget"></div>
     </div>
   </div>
 </div>
+<script src="catalog.js"></script>
 <script src="shared.js"></script>
-<button class="book-fab" onclick="openSelector()">&#8594; Prenota</button>
+<button class="book-fab" data-action="book-selector">&#8594; Prenota</button>
 <script src="main.js"></script>
 </body>
 </html>

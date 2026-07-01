@@ -3,34 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Dimora sul Canale &middot; Appartamenti Fiorenti</title>
-<meta name="description" content="Dimora sul Canale (C3A): appartamento luminoso ai Navigli, Milano. Fino a 8 ospiti, 4 camere matrimoniali. Vista sul canale. Prenota direttamente senza commissioni.">
-<meta property="og:title" content="Dimora sul Canale &middot; Appartamenti Fiorenti">
+<title>Dimora sul Canale – Appartamento Navigli Milano 8 Ospiti | Appartamenti Fiorenti</title>
+<meta name="description" content="Dimora sul Canale (C3A): appartamento luminoso ai Navigli, Milano. Fino a 8 ospiti, 4 camere matrimoniali, vista sul canale. Prenota direttamente senza commissioni.">
+<meta property="og:title" content="Dimora sul Canale · C3A – Appartamento Navigli Milano 8 Ospiti">
 <meta property="og:description" content="Navigli, aperitivi e vita di quartiere. Un appartamento luminoso a pochi passi dalla movida più autentica di Milano.">
 <meta property="og:image" content="https://casefiorenti.it/immagini/img_03.jpg">
-<meta property="og:type" content="website">
+<meta property="og:type" content="place">
 <meta property="og:url" content="https://casefiorenti.it/c3a.html">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
 <link rel="canonical" href="https://casefiorenti.it/c3a.html">
 <link rel="alternate" hreflang="it" href="https://casefiorenti.it/c3a.html">
 <link rel="alternate" hreflang="en" href="https://casefiorenti.it/en/c3a.html">
+<link rel="alternate" hreflang="x-default" href="https://casefiorenti.it/c3a.html">
 <link rel="icon" href="immagini/img_01.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap">
 <link rel="stylesheet" href="stile.css">
+<link rel="preload" as="image" href="immagini/img_03.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Apartment",
+  "name": "Dimora sul Canale",
+  "description": "Appartamento luminoso ai Navigli, Milano. Fino a 8 ospiti, 4 camere matrimoniali, vista sul canale. Prenotazione diretta senza commissioni.",
+  "url": "https://casefiorenti.it/c3a.html",
+  "identifier": "IT015146C2L8X2HZJ2",
+  "image": [
+    "https://casefiorenti.it/immagini/img_03.jpg",
+    "https://casefiorenti.it/immagini/img_05.jpg",
+    "https://casefiorenti.it/immagini/img_06.jpg"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Milano",
+    "addressRegion": "MI",
+    "addressCountry": "IT"
+  },
+  "occupancy": {
+    "@type": "QuantitativeValue",
+    "maxValue": 8
+  },
+  "numberOfRooms": 4,
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Wi-Fi fibra ottica",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Aria condizionata",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Cucina attrezzata",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Lavatrice",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Smart TV",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Vista sul canale",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "2 bagni en-suite",
+      "value": true
+    }
+  ],
+  "containedInPlace": {
+    "@type": "LodgingBusiness",
+    "name": "Appartamenti Fiorenti",
+    "url": "https://casefiorenti.it/"
+  }
+}
+</script>
 </head>
 <body>
-  <nav class="site-nav">
+<nav class="site-nav">
   <a href="index.html" class="nav-logo"><img src="immagini/img_01.webp" alt="Appartamenti Fiorenti"></a>
   <div class="nav-links">
     <a href="index.html" data-page="index">Home</a>
     <a href="vv14.html" data-page="vv14">Casa di Ringhiera</a>
-    <a href="c3a.html" data-page="c3a" class="active">Dimora sul Canale</a>
-    <a href="da23.html" data-page="da23">Dimora Vertigo</a>
+        <a href="c3a.html" data-page="c3a" class="active">Dimora sul Canale</a>
+        <a href="da23.html" data-page="da23">Dimora Vertigo</a>
   </div>
   <div class="nav-right">
     <div class="nav-dimore">
-      <button class="nav-dimore-btn" onclick="toggleDimore(this)" aria-expanded="false">
+      <button class="nav-dimore-btn" data-action="toggle-dimore" aria-expanded="false" aria-controls="navDimoreMenu">
         Dimore <span class="nav-dimore-arrow"><span></span><span></span><span></span></span>
       </button>
-      <div class="nav-dimore-menu">
+      <div class="nav-dimore-menu" id="navDimoreMenu">
         <a href="vv14.html" data-page="vv14">Casa di Ringhiera</a>
         <a href="c3a.html" data-page="c3a" class="active">Dimora sul Canale</a>
         <a href="da23.html" data-page="da23">Dimora Vertigo</a>
@@ -39,83 +114,124 @@
     <div class="nav-lang">
       <span class="nav-lang-opt active">IT</span>
       <span class="nav-lang-sep">|</span>
-      <a href="en/c3a.html" class="nav-lang-opt">EN</a>
+      <a href="en/c3a.html" class="nav-lang-opt" aria-label="English version">EN</a>
     </div>
-    <button class="nav-book" onclick="openModal('c3a')">Prenota</button>
+    <button class="nav-book" data-action="book" data-prop="c3a">Prenota</button>
   </div>
 </nav>
 
-  <section class="prop-hero">
-    <img src="immagini/img_03.jpg" alt="Dimora sul Canale" class="prop-hero-img" fetchpriority="high">
-    <div class="prop-hero-overlay"></div>
-    <div class="prop-hero-title">
-      <p class="prop-hero-eyebrow">C3A &middot; Milano</p>
-      <h1 class="prop-hero-name">Dimora sul Canale</h1>
+<section class="prop-hero">
+  <img src="immagini/img_03.jpg" alt="Dimora sul Canale" class="prop-hero-img" fetchpriority="high">
+  <div class="prop-hero-overlay"></div>
+  <div class="prop-hero-title">
+    <p class="prop-hero-eyebrow">C3A &middot; Milano</p>
+    <h1 class="prop-hero-name">Dimora sul Canale</h1>
+  </div>
+</section>
+<div class="gallery-strip" data-gallery='["immagini/img_03.jpg","immagini/img_05.jpg","immagini/img_06.jpg","immagini/img_07.jpg","immagini/img_08.jpg","immagini/img_09.jpg","immagini/img_10.jpg","immagini/img_11.jpg"]'>
+  <button class="gallery-thumb active" data-action="lb-open" data-lb="0" aria-label="Dimora sul Canale – foto 1"><img src="immagini/img_03.jpg" alt="Dimora sul Canale – foto 1"></button>
+  <button class="gallery-thumb" data-action="lb-open" data-lb="1" aria-label="Dimora sul Canale – foto 2"><img src="immagini/img_05.jpg" alt="Dimora sul Canale – foto 2" loading="lazy"></button>
+  <button class="gallery-thumb" data-action="lb-open" data-lb="2" aria-label="Dimora sul Canale – foto 3"><img src="immagini/img_06.jpg" alt="Dimora sul Canale – foto 3" loading="lazy"></button>
+  <button class="gallery-thumb" data-action="lb-open" data-lb="3" aria-label="Dimora sul Canale – foto 4"><img src="immagini/img_07.jpg" alt="Dimora sul Canale – foto 4" loading="lazy"></button>
+  <button class="gallery-thumb" data-action="lb-open" data-lb="4" aria-label="Dimora sul Canale – foto 5"><img src="immagini/img_08.jpg" alt="Dimora sul Canale – foto 5" loading="lazy"></button>
+  <button class="gallery-thumb" data-action="lb-open" data-lb="5" aria-label="Dimora sul Canale – foto 6"><img src="immagini/img_09.jpg" alt="Dimora sul Canale – foto 6" loading="lazy"></button>
+  <button class="gallery-thumb" data-action="lb-open" data-lb="6" aria-label="Dimora sul Canale – foto 7"><img src="immagini/img_10.jpg" alt="Dimora sul Canale – foto 7" loading="lazy"></button>
+  <button class="gallery-thumb" data-action="lb-open" data-lb="7" aria-label="Dimora sul Canale – foto 8"><img src="immagini/img_11.jpg" alt="Dimora sul Canale – foto 8" loading="lazy"></button>
+</div>
+<div class="prop-content">
+  <div class="prop-main">
+    <p class="section-eyebrow">C3A</p>
+    <h2>Una residenza pensata<br>per chi vive Milano davvero.</h2>
+    <p>I Navigli sono il quartiere dove Milano si scioglie: mercati, gallerie, aperitivi al tramonto sull'acqua. Dimora sul Canale è immersa in questo ritmo, a pochi passi da tutto.</p>
+    <p>Quattro camere da letto matrimoniali, tutte climatizzate: due con bagno en-suite privato, due che condividono un bagno comune. Ideale per famiglie numerose, gruppi di amici o due coppie che viaggiano insieme.</p>
+    <div class="amenities">
+      <h3>Dotazioni</h3>
+      <div class="amenities-grid"><div class="amenity">Wi-Fi fibra ottica</div><div class="amenity">Cucina completamente attrezzata</div><div class="amenity">4 letti matrimoniali</div><div class="amenity">2 bagni en-suite</div><div class="amenity">1 bagno condiviso (x2 camere)</div><div class="amenity">Lavatrice</div><div class="amenity">Aria condizionata</div><div class="amenity">Smart TV</div><div class="amenity">Biancheria premium</div><div class="amenity">Check-in autonomo (24h)</div><div class="amenity">Vista sul canale</div></div>
     </div>
-  </section>
-  <div class="gallery-strip">
-    <img src="immagini/img_03.jpg" alt="" onclick="openLb(0)" class="active">
-    <img src="immagini/img_05.jpg" alt="" onclick="openLb(1)" loading="lazy"><img src="immagini/img_06.jpg" alt="" onclick="openLb(2)" loading="lazy"><img src="immagini/img_07.jpg" alt="" onclick="openLb(3)" loading="lazy"><img src="immagini/img_08.jpg" alt="" onclick="openLb(4)" loading="lazy"><img src="immagini/img_09.jpg" alt="" onclick="openLb(5)" loading="lazy"><img src="immagini/img_10.jpg" alt="" onclick="openLb(6)" loading="lazy"><img src="immagini/img_11.jpg" alt="" onclick="openLb(7)" loading="lazy">
+    <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
+      <button class="btn-primary" data-action="book" data-prop="c3a">Prenota ora</button>
+      <a href="index.html" class="btn-outline">Altre residenze</a>
+    </div>
   </div>
-  <div class="prop-content">
-    <div class="prop-main">
-      <p class="section-eyebrow">C3A</p>
-      <h2>Una residenza pensata<br>per chi vive Milano davvero.</h2>
-      <p>I Navigli sono il quartiere dove Milano si scioglie: mercati, gallerie, aperitivi al tramonto sull'acqua.
-        Dimora sul Canale &egrave; immersa in questo ritmo, a pochi passi da tutto.</p>
-      <p>Quattro camere da letto matrimoniali, tutte climatizzate: due con bagno en-suite privato, due che condividono
-        un bagno comune. Ideale per famiglie numerose, gruppi di amici o due coppie che viaggiano insieme.</p>
-      <div class="amenities">
-        <h3>Dotazioni</h3>
-        <div class="amenities-grid">
-          <div class="amenity">Wi-Fi fibra ottica</div>
-          <div class="amenity">Cucina completamente attrezzata</div>
-          <div class="amenity">4 letti matrimoniali</div>
-          <div class="amenity">2 bagni en-suite</div>
-          <div class="amenity">1 bagno condiviso (x2 camere)</div>
-          <div class="amenity">Lavatrice</div>
-          <div class="amenity">Aria condizionata</div>
-          <div class="amenity">Smart TV</div>
-          <div class="amenity">Biancheria premium</div>
-          <div class="amenity">Check-in autonomo (24h)</div>
-          <div class="amenity">Vista sul canale</div>
-        </div>
+  <aside class="prop-sidebar">
+    <div class="booking-card">
+      <p class="bc-title">Dimora sul Canale</p>
+      <p class="bc-sub">Prenotazione diretta · No commissioni</p>
+      <p class="bc-cin">CIN IT015146C2L8X2HZJ2</p>
+      <div class="bc-meta">
+        <div><p class="bc-m-label">Ospiti</p><p class="bc-m-val">8</p></div>
+        <div><p class="bc-m-label">Camere</p><p class="bc-m-val">4</p></div>
+        <div><p class="bc-m-label">Check-in</p><p class="bc-m-val">15:00</p></div>
+        <div><p class="bc-m-label">Da</p><p class="bc-m-val">&euro;438/notte</p></div>
       </div>
-      <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap">
-        <button class="btn-primary" onclick="openModal('c3a')">Prenota ora</button>
-        <a href="index.html" class="btn-outline">Altre residenze</a>
+      <button class="btn-primary bc-btn" data-action="book" data-prop="c3a">Verifica disponibilità</button>
+      <p class="bc-note">Pagamento sicuro · Cancellazione flessibile<br>Assistenza 24/7</p>
+    </div>
+  </aside>
+</div>
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Galleria immagini" data-action="lb-overlay">
+  <button class="lb-close" data-action="lb-close" aria-label="Chiudi">&#10005;</button>
+  <button class="lb-prev" data-action="lb-prev" aria-label="Precedente">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-next" data-action="lb-next" aria-label="Successiva">&#8250;</button>
+</div>
+<footer class="site-footer">
+  <div class="footer-logo"><img src="immagini/img_01.webp" alt="Appartamenti Fiorenti" loading="lazy"></div>
+  <p class="footer-note">Milano &middot; Appartamenti Fiorenti &copy; 2026 &middot; Tutti i diritti riservati</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="vv14.html">Casa di Ringhiera</a>
+    <a href="c3a.html">Dimora sul Canale</a>
+    <a href="da23.html">Dimora Vertigo</a>
+  </div>
+  <div class="footer-legal">
+    <a href="contatti.html">Contatti</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cookie-policy.html">Cookie Policy</a>
+  </div>
+</footer>
+<div class="modal-overlay" id="modalOverlay" data-action="modal-overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalStep1Title">
+    <button class="modal-close" data-action="modal-close" aria-label="Chiudi">&#10005;</button>
+
+    <!-- STEP 1: selezione residenza -->
+    <div id="modalStep1">
+      <p class="modal-eyebrow">Prenota</p>
+      <h3 class="modal-title" id="modalStep1Title" style="margin-bottom:1.75rem">Quale residenza ti interessa?</h3>
+      <div class="prop-selector">
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="vv14">
+          <span class="psel-code">VV14</span>
+          <span class="psel-name">Casa di Ringhiera</span>
+          <span class="psel-detail">2 camere &middot; 6 ospiti</span>
+          <span class="psel-arrow">&#8250;</span>
+        </button>
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="c3a">
+          <span class="psel-code">C3A</span>
+          <span class="psel-name">Dimora sul Canale</span>
+          <span class="psel-detail">4 camere &middot; 8 ospiti</span>
+          <span class="psel-arrow">&#8250;</span>
+        </button>
+        <button class="prop-sel-btn" data-action="select-prop" data-prop="da23">
+          <span class="psel-code">DA23</span>
+          <span class="psel-name">Dimora Vertigo</span>
+          <span class="psel-detail">1 camera &middot; 6 ospiti</span>
+          <span class="psel-arrow">&#8250;</span>
+        </button>
       </div>
     </div>
-    <aside class="prop-sidebar">
-      <div class="booking-card">
-        <p class="bc-title">Dimora sul Canale</p>
-        <p class="bc-sub">Prenotazione diretta &middot; No commissioni</p>
-        <div class="bc-meta">
-          <div><p class="bc-m-label">Ospiti</p><p class="bc-m-val">8</p></div>
-          <div><p class="bc-m-label">Camere</p><p class="bc-m-val">4</p></div>
-          <div><p class="bc-m-label">Check-in</p><p class="bc-m-val">15:00</p></div>
-        </div>
-        <button class="btn-primary bc-btn" onclick="openModal('c3a')">Verifica disponibilit&agrave;</button>
-        <p class="bc-note">Pagamento sicuro &middot; Cancellazione flessibile<br>Assistenza 24/7</p>
-      </div>
-    </aside>
+
+    <!-- STEP 2: widget Vikey -->
+    <div id="modalStep2" style="display:none">
+      <button class="modal-back" data-action="modal-back">&#8592; Cambia residenza</button>
+      <p class="modal-eyebrow" id="modalCode"></p>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <div class="modal-widget" id="modalWidget"></div>
+    </div>
   </div>
-  <!-- Lightbox -->
-  <div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Galleria immagini" onclick="if(event.target===this)closeLb()">
-    <button class="lb-close" onclick="closeLb()">&#10005;</button>
-    <button class="lb-prev" onclick="lbPrev()">&#8249;</button>
-    <img id="lbImg" src="" alt="">
-    <button class="lb-next" onclick="lbNext()">&#8250;</button>
-  </div>
-  <footer class="site-footer">
-    <div class="footer-logo"><img src="immagini/img_01.webp" alt="Appartamenti Fiorenti" loading="lazy"></div>
-    <p class="footer-note">Milano &middot; Appartamenti Fiorenti &middot; Tutti i diritti riservati</p>
-    <div class="footer-links"><a href="index.html">Home</a><a href="vv14.html">Casa di Ringhiera</a><a href="c3a.html">Dimora sul Canale</a><a href="da23.html">Dimora Vertigo</a></div>
-  </footer>
-  <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" onclick="closeModalDirect()">&#10005;</button><p class="modal-eyebrow" id="modalCode"></p><h3 class="modal-title" id="modalTitle"></h3><div class="modal-widget" id="modalWidget"></div></div></div>
-<script>var gallImgs=["immagini/img_03.jpg","immagini/img_05.jpg","immagini/img_06.jpg","immagini/img_07.jpg","immagini/img_08.jpg","immagini/img_09.jpg","immagini/img_10.jpg","immagini/img_11.jpg"];var lbIdx=0;</script>
+</div>
+<script src="catalog.js"></script>
 <script src="shared.js"></script>
-<button class="book-fab" onclick="openModal('c3a')">&#8594; Prenota</button>
+<button class="book-fab" data-action="book" data-prop="c3a">&#8594; Prenota</button>
 <script src="main.js"></script>
 </body>
 </html>
